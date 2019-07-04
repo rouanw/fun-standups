@@ -25,6 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <link href="https://fonts.googleapis.com/css?family=Handlee|Pangolin&display=swap" rel="stylesheet"/>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
