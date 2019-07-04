@@ -1,0 +1,22 @@
+
+.format {
+  max-width: 350px;
+}
+
+.format-title {
+  color: rgb(3, 3, 3);
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.format-image {
+  max-height: 300px;
+  max-width: 350px;
+}
+
+.formats {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+  grid-gap:60px;
+  align-items: center;
+  }
