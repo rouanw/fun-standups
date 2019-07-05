@@ -11,7 +11,7 @@ const FormatDetails = ({ pageContext } ) => {
     <Layout>
       <SEO title="TBC" />
       <div className="container">
-        <Format title={format.title} description={format.description} ></Format>
+        <Format title={format.title} summary={format.summary}></Format>
       </div>
     </Layout>
   );

@@ -12,7 +12,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <div className="container">
       <div className="formats">
-        {formats.map((format) => <Format title={format.title} description={format.description} slug={format.slug}></Format>)}
+        {formats.map((format) => <Format title={format.title} summary={format.summary} slug={format.slug}></Format>)}
       </div>
     </div>
     <Link to="/page-2/">Go to page 2</Link>
