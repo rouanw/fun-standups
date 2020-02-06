@@ -4,9 +4,10 @@ import React from "react"
 
 const Format = ({ title, summary, slug }) => (
   <div className="format">
-    <div className="format-title">{title}</div>
+    <Link to={`/${slug}`}>
+      <div className="format-title">{title}</div>
+    </Link>
     <div className="format-summary">{summary}</div>
-    <Link to={`/${slug}`}>Read more</Link>
   </div>
 )
 
