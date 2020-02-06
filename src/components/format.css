@@ -2,9 +2,23 @@
 .format {
   border: 1px solid lightgrey;
   padding: 15px;
-  box-shadow: 10px 5px 5px darkgrey;
+  box-shadow: 1px 1px 3px #ccc7c7;
   height: 200px;
   overflow: hidden;
+}
+
+.format-wrapper a {
+  text-decoration: none;
+  color: black;
+}
+
+.format-wrapper {
+  transition: all .2s ease-in-out;
+}
+
+.format-wrapper:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .format-title {
