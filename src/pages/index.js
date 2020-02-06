@@ -13,7 +13,7 @@ const tagColours = ['#F4B28D', '#E7E0A8', '#C2DFD0', '#A38690'];
 
 const IndexPage = () => {
   const [visibleFormats, setVisibleFormats] = useState(formats)
-
+  const [currentTag, setCurrentTag] = useState()
   return (
     <Layout>
       <SEO title="Home" />
@@ -23,9 +23,14 @@ const IndexPage = () => {
             availableTags.map((tag, index) => (
               <button
                 className="tag"
-                onClick={() => {setVisibleFormats(filterFormatsByTag(formats, tag))}}
+                onClick={() => {
+                  setCurrentTag(tag)
+                  setVisibleFormats(filterFormatsByTag(formats, tag))
+                }}
                 style={{
                   'background-color': tagColours[index],
+                  'font-weight': tag === currentTag ? 'bold':'normal',
+                  'opacity': !currentTag || tag === currentTag ? 1 : 0.5
                 }}
               >
                 {tag}
@@ -34,7 +39,10 @@ const IndexPage = () => {
           }
           <button
             className="tag"
-            onClick={() => {setVisibleFormats(formats)}}
+            onClick={() => {
+              setCurrentTag()
+              setVisibleFormats(formats)
+            }}
           >
             all
           </button>
