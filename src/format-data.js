@@ -8,6 +8,10 @@ module.exports = [
       "Helps build relationships",
       "Helps the team notice information asymmetry. E.g. it becomes very clear that an engineer uses too much technical jargon in their updates when they have to give their update directly to the visual designer on the team.",
       "This helps team members to focus on useful information. It’s easier to keep an update to the point when you’re talking to a particular person."
+    ],
+    tags: [
+      'team bonding',
+      'focus',
     ]
   },
   {
@@ -18,6 +22,9 @@ module.exports = [
     benefits:[
       "Helps keep standups short and focused",
       "Helps encourage team members to use other communication channels to talk about things that aren’t crucial for standup - i.e. it encourages people to actually talk to each other outside of standup"
+    ],
+    tags: [
+      'focus',
     ]
   },
   {
@@ -40,6 +47,9 @@ module.exports = [
       "Helps the team build awareness of the fact that not everyone will be at every standup and to consider how to communicate what happened in standup in an effective way",
       "Promotes listening skills as everyone else in the team is keen to see if the nominated person gets it right!",
       "You may notice which bits of the standup end up getting forgotten. Are these important at all or could you have done without them?"
+    ],
+    tags: [
+      'communication'
     ]
   },
   {
@@ -60,6 +70,9 @@ module.exports = [
     description: "This is a classic standup format. Go around the team and let each person give an update on what they did yesterday (i.e. since the last standup), what they’ll be doing today and whether there are any blockers making it difficult for their work to progress.",
     benefits: [
       "This is a tried-and-tested format and a good one to fall back on",
+    ],
+    tags: [
+      'classic'
     ]
   },
   {
