@@ -33,3 +33,12 @@
   grid-gap: 50px;
   align-items: top; 
 }
+
+.tags {
+  margin-bottom: 20px;
+}
+
+.tag {
+  border: none;
+  margin: 5px;
+}

@@ -17,20 +17,24 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <div className="container">
-        {
-          availableTags.map((tag) => (
-            <button
-              onClick={() => {setVisibleFormats(filterFormatsByTag(formats, tag))}}
-            >
-              {tag}
-            </button>
-          ))
-        }
-        <button
-          onClick={() => {setVisibleFormats(formats)}}
-        >
-          all
-        </button>
+        <div className="tags">
+          {
+            availableTags.map((tag) => (
+              <button
+                className="tag"
+                onClick={() => {setVisibleFormats(filterFormatsByTag(formats, tag))}}
+              >
+                {tag}
+              </button>
+            ))
+          }
+          <button
+            className="tag"
+            onClick={() => {setVisibleFormats(formats)}}
+          >
+            all
+          </button>
+        </div>
         <div className="formats">
           {visibleFormats.map((format) => <Format title={format.title} summary={format.summary} slug={format.slug}></Format>)}
         </div>
