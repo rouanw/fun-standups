@@ -15,7 +15,6 @@ const IndexPage = () => (
         {formats.map((format) => <Format title={format.title} summary={format.summary} slug={format.slug}></Format>)}
       </div>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 
