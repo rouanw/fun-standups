@@ -40,5 +40,12 @@
 
 .tag {
   border: none;
-  margin: 5px;
+  margin: 10px;
+  padding: 5px;
+  font-family: sans-serif;
+  width: 140px;
+}
+
+.tag:hover {
+  cursor: pointer;
 }

@@ -9,6 +9,7 @@ import formats from "../format-data"
 const filterFormatsByTag = (formats, tag) => formats.filter((format) => format.tags && format.tags.includes(tag));
 
 const availableTags = Array.from(new Set(formats.map((format) => format.tags).flat().filter(Boolean)));
+const tagColours = ['#F4B28D', '#E7E0A8', '#C2DFD0', '#A38690'];
 
 const IndexPage = () => {
   const [visibleFormats, setVisibleFormats] = useState(formats)
@@ -19,10 +20,13 @@ const IndexPage = () => {
       <div className="container">
         <div className="tags">
           {
-            availableTags.map((tag) => (
+            availableTags.map((tag, index) => (
               <button
                 className="tag"
                 onClick={() => {setVisibleFormats(filterFormatsByTag(formats, tag))}}
+                style={{
+                  'background-color': tagColours[index],
+                }}
               >
                 {tag}
               </button>
