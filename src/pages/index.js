@@ -19,6 +19,9 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <div className="container">
+        <div className="description">
+          Tired of having the same old standup every day? Use these fun and creative standup formats to mix things up and learn more about your team and work.
+        </div>
         <div className="tags">
           {
             availableTags.map((tag) => (
