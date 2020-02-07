@@ -2,17 +2,17 @@ import React, { useState } from 'react'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import "../components/format.css"
-import Format from "../components/format"
-import formats from "../format-data"
+import "../components/standup.css"
+import Standup from "../components/standup"
+import standups from "../standup-data"
 
-const filterFormatsByTag = (formats, tag) => formats.filter((format) => format.tags && format.tags.includes(tag));
+const filterstandupsByTag = (standups, tag) => standups.filter((standup) => standup.tags && standup.tags.includes(tag));
 
-const availableTags = Array.from(new Set(formats.map((format) => format.tags).flat().filter(Boolean)));
+const availableTags = Array.from(new Set(standups.map((standup) => standup.tags).flat().filter(Boolean)));
 const tagColours = ['#F4B28D', '#E7E0A8', '#C2DFD0', '#A38690'];
 
 const IndexPage = () => {
-  const [visibleFormats, setVisibleFormats] = useState(formats)
+  const [visiblestandups, setVisiblestandups] = useState(standups)
   const [currentTag, setCurrentTag] = useState()
   return (
     <Layout>
@@ -25,7 +25,7 @@ const IndexPage = () => {
                 className="tag"
                 onClick={() => {
                   setCurrentTag(tag)
-                  setVisibleFormats(filterFormatsByTag(formats, tag))
+                  setVisiblestandups(filterstandupsByTag(standups, tag))
                 }}
                 style={{
                   'background-color': tagColours[index],
@@ -41,14 +41,14 @@ const IndexPage = () => {
             className="tag"
             onClick={() => {
               setCurrentTag()
-              setVisibleFormats(formats)
+              setVisiblestandups(standups)
             }}
           >
             all
           </button>
         </div>
-        <div className="formats">
-          {visibleFormats.map((format) => <Format title={format.title} summary={format.summary} slug={format.slug}></Format>)}
+        <div className="standups">
+          {visiblestandups.map((standup) => <Standup title={standup.title} summary={standup.summary} slug={standup.slug}></Standup>)}
         </div>
       </div>
     </Layout>

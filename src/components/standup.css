@@ -1,5 +1,5 @@
 
-.format {
+.standup {
   border: 1px solid lightgrey;
   padding: 15px;
   box-shadow: 1px 1px 3px #ccc7c7;
@@ -7,27 +7,27 @@
   overflow: hidden;
 }
 
-.format-wrapper a {
+.standup-wrapper a {
   text-decoration: none;
   color: black;
 }
 
-.format-wrapper {
+.standup-wrapper {
   transition: all .2s ease-in-out;
 }
 
-.format-wrapper:hover {
+.standup-wrapper:hover {
   cursor: pointer;
   transform: scale(1.05);
 }
 
-.format-title {
+.standup-title {
   color: rgb(3, 3, 3);
   font-size: 20px;
   margin-bottom: 15px;
 }
 
-.formats {
+.standups {
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(350px , 1fr));
   grid-gap: 50px;

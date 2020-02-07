@@ -6,17 +6,17 @@
 
 // You can delete this file if you're not using it
 const path = require(`path`)
-const formats = require('./src/format-data')
+const standups = require('./src/standup-data')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  formats.forEach((format) => {
+  standups.forEach((standup) => {
     createPage({
-      path: format.slug,
-      component: path.resolve(`./src/components/format-details.js`),
+      path: standup.slug,
+      component: path.resolve(`./src/components/standup-details.js`),
         context: {
-          format,
+          standup,
         }
     })
   });
