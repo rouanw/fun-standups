@@ -5,6 +5,8 @@
   box-shadow: 1px 1px 3px #ccc7c7;
   height: 200px;
   position: relative;
+  font-family: sans-serif;
+  font-size: 16px;
 }
 
 .standup-summary {
@@ -30,6 +32,7 @@
   color: rgb(3, 3, 3);
   font-size: 20px;
   margin-bottom: 15px;
+  font-weight: bold;
 }
 
 .standups {
