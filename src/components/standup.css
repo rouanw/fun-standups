@@ -1,4 +1,4 @@
-body {background-color: #f7f7f7;}
+body { background-color: #f7f7f7; }
 
 .standup {
   border: 1px solid lightgrey;
@@ -35,7 +35,7 @@ body {background-color: #f7f7f7;}
 
 .standup-title {
   color: rgb(3, 3, 3);
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 15px;
   font-weight: bold;
 }

@@ -19,10 +19,14 @@
   max-width: 350px;
 }
 
+.related-standups .standup-title {
+  font-size: 18px;
+}
+
 .related-standups-header {
   font-size: 24px;
   font-weight: bold;
   font-family: sans-serif;
   margin-bottom: 20px;
-  color: '#6ec0bf'
+  color: #6ec0bf;
 }
