@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import _ from 'lodash'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,7 +10,7 @@ import getTagColors from "../get-tag-colors"
 
 const filterStandupsByTag = (standups, tag) => standups.filter((standup) => standup.tags && standup.tags.includes(tag));
 
-const availableTags = Array.from(new Set(standups.map((standup) => standup.tags).flat().filter(Boolean)));
+const availableTags = Array.from(new Set(_.flatten(standups.map((standup) => standup.tags)).filter(Boolean)));
 const tagColors = getTagColors();
 
 const IndexPage = () => {
