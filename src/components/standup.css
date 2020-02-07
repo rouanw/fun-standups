@@ -4,6 +4,11 @@
   padding: 15px;
   box-shadow: 1px 1px 3px #ccc7c7;
   height: 200px;
+  position: relative;
+}
+
+.standup-summary {
+  max-height: 150px;
   overflow: hidden;
 }
 
@@ -43,11 +48,22 @@
   margin: 10px;
   padding: 5px;
   font-family: sans-serif;
-  width: 150px;
-  transition: all .2s ease-in-out;
+  font-size: 14px;
 }
 
-.tag:hover {
+.tag-button {
+  transition: all .2s ease-in-out;
+  width: 150px;
+  font-size: 18px;
+}
+
+.tag-button:hover {
   cursor: pointer;
   transform: scale(1.05);
+}
+
+.standup-tags {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
 }

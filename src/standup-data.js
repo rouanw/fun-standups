@@ -83,6 +83,9 @@ module.exports = [
     benefits: [
       "Helps keep standups short and focused",
       "Leads to a standup that is future/action focused",
+    ],
+    tags: [
+      'focus'
     ]
   },
   {

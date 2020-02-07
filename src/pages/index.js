@@ -9,7 +9,10 @@ import standups from "../standup-data"
 const filterstandupsByTag = (standups, tag) => standups.filter((standup) => standup.tags && standup.tags.includes(tag));
 
 const availableTags = Array.from(new Set(standups.map((standup) => standup.tags).flat().filter(Boolean)));
-const tagColours = ['#F4B28D', '#E7E0A8', '#C2DFD0', '#A38690'];
+const colors = ['#F4B28D', '#E7E0A8', '#C2DFD0', '#A38690'];
+const tagColors = availableTags.reduce((accum, tag, index) => {
+  return {...accum, ...{ [tag]: colors[index]}};
+}, {})
 
 const IndexPage = () => {
   const [visiblestandups, setVisiblestandups] = useState(standups)
@@ -22,14 +25,14 @@ const IndexPage = () => {
           {
             availableTags.map((tag, index) => (
               <button
-                className="tag"
+                className="tag tag-button"
                 onClick={() => {
                   setCurrentTag(tag)
                   setVisiblestandups(filterstandupsByTag(standups, tag))
                 }}
                 style={{
-                  'background-color': tagColours[index],
-                  'font-weight': tag === currentTag ? 'bold':'normal',
+                  'background-color': tagColors[tag],
+                  'font-weight': tag === currentTag ? 'bold' : 'normal',
                   'opacity': !currentTag || tag === currentTag ? 1 : 0.5
                 }}
               >
@@ -38,7 +41,7 @@ const IndexPage = () => {
             ))
           }
           <button
-            className="tag"
+            className="tag tag-button"
             onClick={() => {
               setCurrentTag()
               setVisiblestandups(standups)
@@ -48,7 +51,7 @@ const IndexPage = () => {
           </button>
         </div>
         <div className="standups">
-          {visiblestandups.map((standup) => <Standup title={standup.title} summary={standup.summary} slug={standup.slug}></Standup>)}
+          {visiblestandups.map((standup) => <Standup title={standup.title} summary={standup.summary} slug={standup.slug} tags={standup.tags} tagColors={tagColors}></Standup>)}
         </div>
       </div>
     </Layout>
