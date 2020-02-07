@@ -3,23 +3,23 @@ import React from "react"
 import Layout from "./layout"
 import SEO from "./seo"
 import "../components/standup-details.css"
+import RelatedStandups from "../components/RelatedStandups"
 
 const StandupDetails = ({ pageContext }) => {
   const { standup } = pageContext
   return (
     <Layout>
       <SEO title="TBC" />
-
-      <div className="standup standup-details">
-        <h2>{standup.title}</h2>
-        <h3>Summary</h3>
-        <p>{standup.summary}</p>
-        <h3>Description</h3>
-        <p>{standup.description}</p>
-        <h3>Benefits</h3>
-        <ul>
-          {standup.benefits.map((benefit)=><li>{benefit}</li>)}
-        </ul>
+      <div className="standup-details-wrapper">
+        <div className="standup standup-details">
+          <h2>{standup.title}</h2>
+          <p>{standup.summary}</p>
+          <p>{standup.description}</p>
+          <ul>
+            {standup.benefits.map((benefit)=><li className="benefit">{benefit}</li>)}
+          </ul>
+        </div>
+        <RelatedStandups tags={standup.tags} title={standup.title} />
       </div>
     </Layout>
   )

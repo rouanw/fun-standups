@@ -1,0 +1,28 @@
+.benefit {
+  list-style-type: "🤷";
+}
+
+.standup-details-wrapper {
+ display: flex;
+}
+
+.standup-details {
+  max-width: 700px;
+}
+
+.related-standups {
+  margin: 0 50px;
+}
+
+.related-standups .standup {
+  margin-bottom: 20px;
+  max-width: 350px;
+}
+
+.related-standups-header {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+  color: '#6ec0bf'
+}
