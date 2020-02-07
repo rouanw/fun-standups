@@ -3,10 +3,13 @@
   border: 1px solid lightgrey;
   padding: 15px;
   box-shadow: 1px 1px 3px #ccc7c7;
-  height: 200px;
   position: relative;
   font-family: sans-serif;
   font-size: 16px;
+}
+
+.standup-card {
+  height: 200px;
 }
 
 .standup-summary {

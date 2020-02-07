@@ -5,7 +5,7 @@ import React from "react"
 const Standup = ({ title, summary, slug, tags, tagColors }) => (
   <div className="standup-wrapper">
     <Link to={`/${slug}`}>
-      <div className="standup">
+      <div className="standup standup-card">
         <div className="standup-title">{title}</div>
         <div className="standup-summary">{summary}</div>
         <div className="standup-tags">
