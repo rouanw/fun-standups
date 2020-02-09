@@ -12,8 +12,8 @@ const Standup = ({ standup, tagColors }) => {
           <div className="standup-summary">{summary}</div>
           <div className="standup-tags">
             {tags.map((tag)=> (
-              <span className="tag" style={{
-                'background-color': tagColors ? tagColors[tag] : 'grey',
+              <span key={tag} className="tag" style={{
+                backgroundColor: tagColors ? tagColors[tag] : 'grey',
               }}
               >
                 {tag}
@@ -33,7 +33,7 @@ Standup.propTypes = {
     slug: PropTypes.string.isRequired,
     tags: PropTypes.array,
   }),
-  tagColors: PropTypes.array.isRequired,
+  tagColors: PropTypes.object.isRequired,
 }
 
 export default Standup

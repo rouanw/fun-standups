@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          <img className="splash" src="/bunnycow.png"/>
+          <img className="splash" src="/bunnycow.png" alt="fun bunny that looks like a cow"/>
       </Link>
       <h1 style={{ margin: 0 }} className="splash-wrapper">
         <Link

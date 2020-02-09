@@ -16,7 +16,7 @@ const StandupDetails = ({ pageContext }) => {
           <p>{standup.summary}</p>
           <p>{standup.description}</p>
           <ul>
-            {standup.benefits.map((benefit)=><li className="benefit">{benefit}</li>)}
+            {standup.benefits.map((benefit)=><li key={benefit.slice(0, 10)} className="benefit">{benefit}</li>)}
           </ul>
         </div>
         <RelatedStandups tags={standup.tags} title={standup.title} />

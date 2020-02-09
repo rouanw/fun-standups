@@ -33,10 +33,11 @@ const IndexPage = () => {
                   setVisiblestandups(filterStandupsByTag(standups, tag))
                 }}
                 style={{
-                  'background-color': tagColors[tag],
-                  'font-weight': tag === currentTag ? 'bold' : 'normal',
-                  'opacity': !currentTag || tag === currentTag ? 1 : 0.5
+                  backgroundColor: tagColors[tag],
+                  fontWeight: tag === currentTag ? 'bold' : 'normal',
+                  opacity: !currentTag || tag === currentTag ? 1 : 0.5
                 }}
+                key={tag}
               >
                 {tag}
               </button>
@@ -53,7 +54,7 @@ const IndexPage = () => {
           </button>
         </div>
         <div className="standups">
-          {visiblestandups.map((standup) => <Standup standup={standup} tagColors={tagColors}></Standup>)}
+          {visiblestandups.map((standup) => <Standup key={standup.title} standup={standup} tagColors={tagColors}></Standup>)}
         </div>
       </div>
     </Layout>
