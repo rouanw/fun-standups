@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/fun-standups",
   siteMetadata: {
     title: `Fun Standups`,
-    description: `Tired of having the same old standup every day? Use these fun and creative standup formats to mix things up and learn more about your team and work.`,
+    description: `Tired of having the same old Zoom call every day? Use these fun and creative standup formats to mix things up and learn more about your team and work.`,
     author: `@rouanw`,
     twitterUsername: '@rouanw',
   },

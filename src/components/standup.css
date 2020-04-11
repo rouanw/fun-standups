@@ -16,6 +16,12 @@ header {
   min-height: 300px;
 }
 
+.tagline {
+  color: white;
+  font-family: sans-serif;
+  margin-top: 10px;
+}
+
 .splash {
   max-height: 180px;
 }

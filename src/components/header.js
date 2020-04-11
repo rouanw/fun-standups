@@ -36,6 +36,7 @@ const Header = ({ siteTitle }) => (
           <span className="site-name">{siteTitle}!</span>
         </Link>
       </h1>
+      <div class="tagline">Remote-friendly standup ideas for your team</div>
     </div>
   </header>
 )
