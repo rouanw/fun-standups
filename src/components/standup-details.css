@@ -9,13 +9,7 @@
 
 .standup-details {
   max-width: 700px;
-  margin: 20px 0;
-}
-
-@media screen and (min-width:1000px) {
-  .related-standups {
-    margin: 0 50px;
-  }
+  margin: 20px 20px 20px 0;
 }
 
 .related-standups .standup {
