@@ -20,7 +20,7 @@ module.exports = [
     summary: "Each team member only talks about the single most important thing they want to tell people",
     description: "Take turns giving updates. Each team member only talks about the single most important thing they want to tell people.",
     benefits:[
-      "Helps keep standups short and focused",
+      "Helps keep meetings short and focused",
       "Helps encourage team members to use other communication channels to talk about things that aren’t crucial for standup - i.e. it encourages people to actually talk to each other outside of standup"
     ],
     tags: [
@@ -30,12 +30,16 @@ module.exports = [
   {
     slug: "zoom-way-out",
     title: "Zoom way out",
-    summary: "Give an update on each epic",
-    description: "If you have a wall or picture of work that needs to be done for an entire project or for a few months, gather the team around that and for volunteers to give an update on each epic of current/upcoming work.",
+    summary: "Make sure your team gets the big picture by talking about your overall progress",
+    description: "What is your daily work contributing to? Hopefully your team has something (a digital board? a spreadsheet?) that shows how you're doing on your overall goals (maybe it's for a financial quarter, maybe it's for a particular project). Have standup while looking at this (someone share their screen if you're on a call) and ask one person to volunteer to give an update on each part of current/upcoming work.",
     benefits: [
       "Helps the team to see and understand their progress towards a larger goal",
       "Helps the team notice when there are only one or two people who understand the ‘big picture’",
       "Helps spot gaps or issues with the larger plan",
+      "Helps you notice when the view of the larger plan isn't in a format that makes sense to people",
+    ],
+    tags: [
+      'communication'
     ]
   },
   {
