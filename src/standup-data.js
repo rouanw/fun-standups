@@ -1,5 +1,35 @@
 module.exports = [
   {
+    slug: "one-person-missing",
+    title: "One person missing",
+    summary: "One person leaves standup and the rest of the team has to piece it all back together for them.",
+    description: "One person leaves your standup call (or goes to get themselves some coffee if you're in an office).  The team then nominates one person to give the missing person an update on the team’s status. The team then nominates one person to give the missing person an update on the team’s status. Standup then happens as usual without the missing person. They then come back and the nominated person has to fill them in.",
+    benefits: [
+      "Helps the team build awareness of the fact that not everyone will be at every standup and to consider how to communicate what happened in standup in an effective way",
+      "Promotes listening skills as everyone else in the team is keen to see if the nominated person gets it right!",
+      "You may notice which bits of the standup end up getting forgotten. Are these important at all or could you have done without them?",
+      "People are often missing at standup for other reasons (holidays, sick etc.). Might as well get good at it.",
+    ],
+    tags: [
+      'communication',
+      'team bonding',
+    ]
+  },
+  {
+    slug: "everybody-leaves",
+    title: "Almost everyone leaves",
+    summary: "Almost everyone leaves standup and one person has to look at the board to tell everyone else what's happening",
+    description: "Everyone except one team member leaves standup. The person left needs to take a look at the board and try to understand what the status of everyone's work is. While they do this, it's fun for the rest of the team to chat together - either around the corner if everyone's in the same office or on a separate call if you do your standups remote-first",
+    benefits: [
+      "Helps the team connect on a personal level",
+      "You may notice that the team still communicates fine without talking specifically about the status of what they’re working on",
+    ],
+    tags: [
+      'communication',
+      'team bonding',
+    ]
+  },
+  {
     slug: 'update-a-team-mate',
     title: "Update a team mate",
     summary: "Get your whole team feeling involved by having each person update another",
@@ -37,20 +67,6 @@ module.exports = [
       "Helps the team notice when there are only one or two people who understand the ‘big picture’",
       "Helps spot gaps or issues with the larger plan",
       "Helps you notice when the view of the larger plan isn't in a format that makes sense to people",
-    ],
-    tags: [
-      'communication'
-    ]
-  },
-  {
-    slug: "one-person-missing",
-    title: "One person missing",
-    summary: "One person leaves standup. The team then nominates one person to give the missing person an update on the team’s status.",
-    description: "One person leaves standup. The team then nominates one person to give the missing person an update on the team’s status. Standup then happens as usual without the missing person. They then come back and the nominated person has to fill them in.",
-    benefits: [
-      "Helps the team build awareness of the fact that not everyone will be at every standup and to consider how to communicate what happened in standup in an effective way",
-      "Promotes listening skills as everyone else in the team is keen to see if the nominated person gets it right!",
-      "You may notice which bits of the standup end up getting forgotten. Are these important at all or could you have done without them?"
     ],
     tags: [
       'communication'
@@ -117,16 +133,6 @@ module.exports = [
     title: "What’s up with you?",
     summary: "Go around as a team and give personal updates instead of work updates.",
     description: "E.g. “yesterday my wife and I watched the worst movie and today our daughter is having her first ever swimming lesson”",
-    benefits: [
-      "Helps the team connect on a personal level",
-      "You may notice that the team still communicates fine without talking specifically about the status of what they’re working on",
-    ]
-  },
-  {
-    slug: "everybody-leaves",
-    title: "Almost everyone leaves",
-    summary: "Almost everyone leaves standup and one person has to look at the board to tell everyone else what's happening",
-    description: "Everyone except one team member leaves standup. The person left needs to take a look at the board and try to understand what the status of everyone's work is. While they do this, it's fun for the rest of the team to chat together - either around the corner if everyone's in the same office or on a separate call if you do your standups remote-first",
     benefits: [
       "Helps the team connect on a personal level",
       "You may notice that the team still communicates fine without talking specifically about the status of what they’re working on",
