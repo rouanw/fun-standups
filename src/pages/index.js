@@ -50,7 +50,7 @@ const IndexPage = () => {
               setVisiblestandups(standups)
             }}
           >
-            all
+            show all
           </button>
         </div>
         <div className="standups">
