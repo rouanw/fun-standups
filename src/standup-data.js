@@ -3,12 +3,11 @@ module.exports = [
     slug: "one-person-missing",
     title: "One person missing",
     summary: "One person leaves standup and the rest of the team has to piece it all back together for them.",
-    description: "One person leaves your standup call (or goes to get themselves some coffee if you're in an office).  The team then nominates one person to give the missing person an update on the team’s status. The team then nominates one person to give the missing person an update on the team’s status. Standup then happens as usual without the missing person. They then come back and the nominated person has to fill them in.",
+    description: "One person leaves your standup call (or goes to get themselves some coffee if you're in an office). The team then nominates one person to give the missing person an update when they return. Standup then happens as usual without the missing person. When they come back, the nominated person has to fill them in.",
     benefits: [
-      "Helps the team build awareness of the fact that not everyone will be at every standup and to consider how to communicate what happened in standup in an effective way",
+      "Helps the team build awareness of the fact that not everyone will be at every standup and to consider how to communicate what happened in standup in an effective way. People are often missing at standup for other reasons (holidays, sick etc.). Might as well get good at it.",
       "Promotes listening skills as everyone else in the team is keen to see if the nominated person gets it right!",
       "You may notice which bits of the standup end up getting forgotten. Are these important at all or could you have done without them?",
-      "People are often missing at standup for other reasons (holidays, sick etc.). Might as well get good at it.",
     ],
     tags: [
       'communication',
@@ -16,13 +15,14 @@ module.exports = [
     ]
   },
   {
-    slug: "everybody-leaves",
-    title: "Almost everyone leaves",
+    slug: "where-did-everyone-go",
+    title: "Where did everyone go?",
     summary: "Almost everyone leaves standup and one person has to look at the board to tell everyone else what's happening",
-    description: "Everyone except one team member leaves standup. The person left needs to take a look at the board and try to understand what the status of everyone's work is. While they do this, it's fun for the rest of the team to chat together - either around the corner if everyone's in the same office or on a separate call if you do your standups remote-first",
+    description: "Everyone except one team member leaves standup. The person left behind has five minutes to take a look at the board and try to understand the status of everyone's work. While they do this, it's fun for the rest of the team to chat together on a separate video call, or around the corner if everyone's in the same office.",
     benefits: [
       "Helps the team connect on a personal level",
       "You may notice that the team still communicates fine without talking specifically about the status of what they’re working on",
+      "Maybe you already know most of what you need to know before you even get to standup",
     ],
     tags: [
       'communication',
