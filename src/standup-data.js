@@ -65,7 +65,7 @@ module.exports = [
     description: "Take turns giving updates. Each team member only talks about the single most important thing they want to tell people.",
     benefits:[
       "Helps keep meetings short and focused",
-      "Helps encourage team members to use other communication channels to talk about things that aren’t crucial for standup - i.e. it encourages people to actually talk to each other outside of standup"
+      "Helps encourage team members to use other communication channels to talk about things that aren’t crucial for standup - i.e. it encourages people to actually talk to each other outside of standup."
     ],
     tags: [
       'focus',
@@ -95,13 +95,16 @@ module.exports = [
       "Allows the team to discuss something in as much detail as they like",
       "You may notice sometimes the discussion will be detailed and lengthy and other times the discussion will be very short. This may tell you something about the variety of cards on your wall, the size of the work, or whether some kinds of tasks are more involved.",
       "Promotes a deeper understanding of work people aren’t directly involved in",
+    ],
+    tags:[
+      'focus',
     ]
   },
   {
     slug: "yesterday-today-blockers",
     title: "Yesterday, today, blockers",
     summary: "Each person lists what they did yesterday, what they'll do today and what is in their way",
-    description: "This is a classic standup format. Go around the team and let each person give an update on what they did yesterday (i.e. since the last standup), what they’ll be doing today and whether there are any blockers making it difficult for their work to progress.",
+    description: "This is a classic standup format. Each person give an update on what they did yesterday (i.e. since the last standup), what they’ll be doing today and whether there are any blockers making it difficult for their work to progress.",
     benefits: [
       "This is a tried-and-tested format and a good one to fall back on",
     ],
@@ -119,7 +122,8 @@ module.exports = [
       "Leads to a standup that is future/action focused",
     ],
     tags: [
-      'focus'
+      'focus',
+      'classic',
     ]
   },
   {
@@ -130,6 +134,22 @@ module.exports = [
     benefits: [
       "Helps standup be focused on urgent items",
       "Notice how long your standup is - a long standup could mean your team is having to wade through a lot to get there work done. A short standup? Great!",
+    ],
+    tags: [
+      'classic',
+    ]
+  },
+  {
+    slug: "walk-the-wall",
+    title: "Walk the wall",
+    summary: "Talk through the work currently in progress, one item at a time",
+    description: "One person on the call shares their screen (or everyone gathers around a physical Agile wall). The person then asks for updates on each card in your 'In Progress' column. (Sometimes it will also be interesting to peek at your 'To Do' column, or see what new work is coming up soon.",
+    benefits: [
+      "Provides a great detailed view",
+      "A good way of ensuring that no work goes forgotten",
+    ],
+    tags: [
+      'classic',
     ]
   },
   {
