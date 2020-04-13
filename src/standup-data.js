@@ -83,7 +83,8 @@ module.exports = [
       "Helps you notice when the view of the larger plan isn't in a format that makes sense to people",
     ],
     tags: [
-      'communication'
+      'communication',
+      'new view',
     ]
   },
   {
@@ -98,6 +99,7 @@ module.exports = [
     ],
     tags:[
       'focus',
+      'new view'
     ]
   },
   {
@@ -177,6 +179,19 @@ module.exports = [
     ],
     tags: [
       'team bonding',
+    ]
+  },
+  {
+    slug: "metrics-standup",
+    title: "Show me the numbers!",
+    summary: "Take a look at your team's key product metrics (graphs, totals etc.)",
+    description: "Instead of looking at user stories or an Agile wall, have your standup while someone shares a dashboard showing the numbers your team cares about most. This dashboard could contain a graph showing sales pipeline conversions, a table showing the top errors in the last hour, or the number of new user registrations in the day.",
+    benefits: [
+      "Helps the team connect with the bigger goals they're trying to achieve.",
+      "Could reveal if the metrics being used to measure success are flawed, or maybe not visible enough to the team.",
+    ],
+    tags: [
+      'new view',
     ]
   },
 ];
