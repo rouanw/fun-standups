@@ -155,21 +155,28 @@ module.exports = [
   {
     slug: "today-i-learned",
     title: "Today I learned",
-    summary: "Go around as a team and each share one thing you’ve learned since the last standup",
-    description: "This is a more reflective format",
+    summary: "Take turns each sharing one thing you’ve learned since the last standup",
+    description: "This is a more reflective format, which focuses on sharing the things we learn during our day to day work.",
     benefits: [
       "Helps people get used to sharing knowledge with the rest of the team",
       "You may notice that the team still communicates fine without talking specifically about the status of what they’re working on",
+      "You'll probably learn things that will make your job easier",
+    ],
+    tags: [
+      'team bonding',
     ]
   },
   {
     slug: "personal-updates",
-    title: "What’s up with you?",
-    summary: "Go around as a team and give personal updates instead of work updates.",
-    description: "E.g. “yesterday my wife and I watched the worst movie and today our daughter is having her first ever swimming lesson”",
+    title: "How are you today?",
+    summary: "Take turns giving personal updates (no work!)",
+    description: "E.g. “Yesterday my wife and I watched the worst movie and today our daughter is having her first ever swimming lesson”.",
     benefits: [
-      "Helps the team connect on a personal level",
+      "Helps the team connect on a personal level and get to know each other.",
       "You may notice that the team still communicates fine without talking specifically about the status of what they’re working on",
+    ],
+    tags: [
+      'team bonding',
     ]
   },
 ];
