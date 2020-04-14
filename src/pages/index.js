@@ -43,15 +43,25 @@ const IndexPage = () => {
               </button>
             ))
           }
-          <button
-            className="tag tag-button"
-            onClick={() => {
-              setCurrentTag()
-              setVisiblestandups(standups)
-            }}
-          >
-            show all
-          </button>
+          <div>
+            <button
+              className="tag tag-button"
+              onClick={() => {
+                setCurrentTag()
+                setVisiblestandups(standups)
+              }}
+            >
+              show all
+            </button>
+            <button className="tag tag-button random"
+              onClick={() => {
+                setVisiblestandups([standups[Math.floor(Math.random() * standups.length)]])
+                setCurrentTag()
+              }}
+            >
+              random!
+            </button>
+          </div>
         </div>
         <div className="standups">
           {visiblestandups.map((standup) => <Standup key={standup.title} standup={standup} tagColors={tagColors}></Standup>)}
