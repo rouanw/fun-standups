@@ -35,7 +35,7 @@ const Header = () => (
           <span className="site-name">Fun Standups!</span>
         </Link>
       </h1>
-      <div class="tagline">Remote-friendly standup ideas for your team</div>
+      <div className="tagline">Remote-friendly standup ideas for your team</div>
     </div>
   </header>
 )
