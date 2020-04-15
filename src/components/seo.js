@@ -67,6 +67,10 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `image`,
+          content: `https://rouanw.github.io/fun-standups/bunnycow.png`,
+        }
       ].concat(meta)}
     />
   )
