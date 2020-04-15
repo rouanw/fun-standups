@@ -68,6 +68,10 @@ function SEO({ description, lang, meta, title, socialTitle }) {
           content: metaDescription,
         },
         {
+          name: `twitter:image`,
+          content: `/bunnycow.png`,
+        },
+        {
           name: `image`,
           content: `/bunnycow.png`,
         }
