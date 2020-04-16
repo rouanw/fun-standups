@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: "/fun-standups",
   siteMetadata: {
     title: `Fun Standups: Remote-friendly standup ideas for your team`,
     description: `Tired of having the same old Zoom call every day? Use these fun and creative standup formats to mix things up and learn more about your team and work.`,
