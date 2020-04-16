@@ -3,6 +3,9 @@ module.exports = [
     slug: "one-person-missing",
     title: "One person missing",
     summary: "One person leaves standup and the rest of the team has to piece it all back together for them.",
+    contributor: {
+      github: "rouanw",
+    },
     description: "One person leaves your standup call (or goes to get themselves some coffee if you're in an office). The team then nominates one person to give the missing person an update when they return. Standup then happens as usual without the missing person. When they come back, the nominated person has to fill them in.",
     benefits: [
       "Helps the team build awareness of the fact that not everyone will be at every standup and to consider how to communicate what happened in standup in an effective way. People are often missing at standup for other reasons (holidays, sick etc.). Might as well get good at it.",
@@ -18,6 +21,9 @@ module.exports = [
     slug: "where-did-everyone-go",
     title: "Where did everyone go?",
     summary: "Almost everyone leaves standup and one person has to look at the board to tell everyone else what's happening",
+    contributor: {
+      github: "rouanw",
+    },
     description: "Everyone except one team member leaves standup. The person left behind has five minutes to take a look at the board and try to understand the status of everyone's work. While they do this, it's fun for the rest of the team to chat together on a separate video call, or around the corner if everyone's in the same office.",
     benefits: [
       "Helps the team connect on a personal level",
@@ -33,6 +39,9 @@ module.exports = [
     slug: 'update-a-team-mate',
     title: "Update a team mate",
     summary: "Get your whole team feeling involved by having each person update another",
+    contributor: {
+      github: "rouanw",
+    },
     description: "Each person gives their update to the another person in the team, using their name and talking to them directly. E.g. “Natalie, yesterday I was working on X and today I’ll be doing Y”. Each person who receives an update picks the next person to give their update to. The last person then updates the first person.  (If people keep picking the same group of team mates to give their update, use a little spreadsheet or script to pick folks randomly.)",
     benefits: [
       "Helps build relationships because everyone in your team gets a chance to have a little conversation.",
@@ -48,6 +57,9 @@ module.exports = [
     slug: "give-someone-else-update",
     title: "Give someone else's update",
     summary: "Each team member tries to give an update for the next person",
+    contributor: {
+      github: "rouanw",
+    },
     description: "Take turns with each person trying to update the team on behalf of the next person. (This works best when one person pick the order for the standup so people don't pick people who are easy.) No one will know everything, but try to see if you can remember what they're doing and what they'll be working on next.",
     benefits: [
       "Builds empathy between team members - everyone is forced to peek into someone else's life",
@@ -62,6 +74,9 @@ module.exports = [
     slug: "one-thing-only",
     title: "One thing only",
     summary: "Each team member only talks about the single most important thing they want to tell people",
+    contributor: {
+      github: "rouanw",
+    },
     description: "Take turns giving updates. Each team member only talks about the single most important thing they want to tell people.",
     benefits:[
       "Helps keep meetings short and focused",
@@ -75,6 +90,9 @@ module.exports = [
     slug: "zoom-way-out",
     title: "Zoom way out",
     summary: "Make sure your team gets the big picture by talking about your overall progress",
+    contributor: {
+      github: "rouanw",
+    },
     description: "What is your daily work contributing to? Hopefully your team has something (a digital board? a spreadsheet?) that shows how you're doing on your overall goals (maybe it's for a financial quarter, maybe it's for a particular project). Have standup while looking at this (someone share their screen if you're on a call) and ask one person to volunteer to give an update on each part of current/upcoming work.",
     benefits: [
       "Helps the team to see and understand their progress towards a larger goal",
@@ -91,6 +109,9 @@ module.exports = [
     slug: "zoom-way-in",
     title: "Zoom way in",
     summary: "Shuffle the cards on your team wall. Select one randomly and only talk about that one card as a team",
+    contributor: {
+      github: "rouanw",
+    },
     description: "Shuffle the cards on your team wall. Select one randomly and only talk about that one card as a team. For teams with digital walls, pop your open story numbers into a little Math.random function to pick a card at random.",
     benefits: [
       "Allows the team to discuss something in as much detail as they like",
@@ -106,6 +127,9 @@ module.exports = [
     slug: "yesterday-today-blockers",
     title: "Yesterday, today, blockers",
     summary: "Each person lists what they did yesterday, what they'll do today and what is in their way",
+    contributor: {
+      github: "rouanw",
+    },
     description: "This is a classic standup format. Each person give an update on what they did yesterday (i.e. since the last standup), what they’ll be doing today and whether there are any blockers making it difficult for their work to progress.",
     benefits: [
       "This is a tried-and-tested format and a good one to fall back on",
@@ -118,6 +142,9 @@ module.exports = [
     slug: "forget-about-the-past",
     title: "Forget about the past",
     summary: "This is the same format as “Yesterday, today, blockers”, except the team members do not update the rest of the team on what they’ve already completed",
+    contributor: {
+      github: "rouanw",
+    },
     description: "Every person lists what they'll be working on today and what might block the progress of that work. Nobody says anything about what happened yesterday.",
     benefits: [
       "Helps keep standups short and focused",
@@ -132,6 +159,9 @@ module.exports = [
     slug: "whats-in-my-way",
     title: "What’s in the way?",
     summary: "Only mention things that are stopping you from getting your work done ",
+    contributor: {
+      github: "rouanw",
+    },
     description: "Go around the team and only mention things that are stopping you from getting your work done or slowing you down. Pass if there’s nothing blocking you.",
     benefits: [
       "Helps standup be focused on urgent items",
@@ -145,6 +175,9 @@ module.exports = [
     slug: "walk-the-wall",
     title: "Walk the wall",
     summary: "Talk through the work currently in progress, one item at a time",
+    contributor: {
+      github: "rouanw",
+    },
     description: "One person on the call shares their screen (or everyone gathers around a physical Agile wall). The person then asks for updates on each card in your 'In Progress' column. (Sometimes it will also be interesting to peek at your 'To Do' column, or see what new work is coming up soon.",
     benefits: [
       "Provides a great detailed view",
@@ -158,6 +191,9 @@ module.exports = [
     slug: "today-i-learned",
     title: "Today I learned",
     summary: "Take turns each sharing one thing you’ve learned since the last standup",
+    contributor: {
+      github: "rouanw",
+    },
     description: "This is a more reflective format, which focuses on sharing the things we learn during our day to day work.",
     benefits: [
       "Helps people get used to sharing knowledge with the rest of the team",
@@ -172,6 +208,9 @@ module.exports = [
     slug: "personal-updates",
     title: "How are you today?",
     summary: "Take turns giving personal updates (no work!)",
+    contributor: {
+      github: "rouanw",
+    },
     description: "E.g. “Yesterday my wife and I watched the worst movie and today our daughter is having her first ever swimming lesson”.",
     benefits: [
       "Helps the team connect on a personal level and get to know each other.",
@@ -185,6 +224,9 @@ module.exports = [
     slug: "metrics-standup",
     title: "Show me the numbers!",
     summary: "Take a look at your team's key product metrics (graphs, totals etc.)",
+    contributor: {
+      github: "rouanw",
+    },
     description: "Instead of looking at user stories or an Agile wall, have your standup while someone shares a dashboard showing the numbers your team cares about most. This dashboard could contain a graph showing sales pipeline conversions, a table showing the top errors in the last hour, or the number of new user registrations in the day.",
     benefits: [
       "Helps the team connect with the bigger goals they're trying to achieve.",

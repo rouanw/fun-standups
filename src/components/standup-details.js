@@ -18,6 +18,15 @@ const StandupDetails = ({ pageContext }) => {
           <ul>
             {standup.benefits.map((benefit)=><li key={benefit.slice(0, 10)} className="benefit">{benefit}</li>)}
           </ul>
+          { standup.contributor && standup.contributor.github && (
+            <div>
+              Contributed by <a
+                href={`https://github.com/${standup.contributor.github}`}
+                rel="noopener noreferrer"
+                target="_blank"
+              >{standup.contributor.github}</a>.
+            </div>
+          )}
         </div>
         <RelatedStandups tags={standup.tags} title={standup.title} />
       </div>
