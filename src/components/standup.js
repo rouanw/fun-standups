@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -6,7 +5,7 @@ const Standup = ({ standup, tagColors }) => {
   const { title, summary, slug, tags = [] } = standup;
   return (
     <div className="standup-wrapper">
-      <Link to={`/${slug}`}>
+      <a href={`/${slug}`}>
         <div className="standup standup-card">
           <div className="standup-title">{title}</div>
           <div className="standup-summary">{summary}</div>
@@ -21,7 +20,7 @@ const Standup = ({ standup, tagColors }) => {
             ))}
           </div>
         </div>
-      </Link>
+      </a>
     </div>
   )
 }

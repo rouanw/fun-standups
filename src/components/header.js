@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import React from "react"
 
 const Header = () => (
@@ -15,25 +14,25 @@ const Header = () => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <Link
-          to="/"
+      <a
+          href="/"
           style={{
             color: `white`,
             textDecoration: `none`,
           }}
         >
           <img className="splash" src="https://rouanw.github.io/fun-standups/bunnycow.png" alt=""/>
-      </Link>
+      </a>
       <h1 style={{ margin: 0 }} className="splash-wrapper">
-        <Link
-          to="/"
+        <a
+          href="/"
           style={{
             color: `white`,
             textDecoration: `none`,
           }}
         >
           <span className="site-name">Fun Standups!</span>
-        </Link>
+        </a>
       </h1>
       <div className="tagline">Remote-friendly standup ideas for your team</div>
     </div>
