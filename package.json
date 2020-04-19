@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "fun-standups",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Powers funstandups.com",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "rouanw",
   "dependencies": {
     "gatsby": "^2.19.12",
     "gatsby-image": "^2.2.40",
@@ -24,10 +24,7 @@
   "devDependencies": {
     "prettier": "^1.19.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
+  "license": "CC-BY-SA-4.0",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -39,9 +36,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/rouanw/fun-standups"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/rouanw/fun-standups/issues"
   }
 }
