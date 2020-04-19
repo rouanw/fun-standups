@@ -36,9 +36,17 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
+          All original content licensed under the
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a
+            href="https://creativecommons.org/licenses/by-sa/4.0/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Creative Commons Attribution-ShareAlike 4.0 International
+          </a>
+          {` `}
+          license.
         </footer>
       </div>
     </>
