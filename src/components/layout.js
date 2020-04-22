@@ -36,17 +36,30 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          All original content licensed under the
-          {` `}
-          <a
-            href="https://creativecommons.org/licenses/by-sa/4.0/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Creative Commons Attribution-ShareAlike 4.0 International
-          </a>
-          {` `}
-          license.
+          <p>
+            All original content is licensed under the
+            {` `}
+            <a
+              href="https://creativecommons.org/licenses/by-sa/4.0/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Creative Commons Attribution-ShareAlike 4.0 International
+            </a>
+            {` `}
+            license.
+          </p>
+          <p>
+            Do you have a standup format you'd like to see here? It's
+            {` `}
+            <a
+              href="https://github.com/rouanw/fun-standups#contributing-a-standup-format"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              easy to add
+            </a> and we'd love it!
+          </p>
         </footer>
       </div>
     </>
