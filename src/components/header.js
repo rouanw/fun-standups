@@ -21,7 +21,7 @@ const Header = () => (
             textDecoration: `none`,
           }}
         >
-          <img className="splash" src="https://rouanw.github.io/fun-standups/bunnycow.png" alt=""/>
+          <img className="splash" src="/bunnycow.png" alt=""/>
       </a>
       <h1 style={{ margin: 0 }} className="splash-wrapper">
         <a
