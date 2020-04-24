@@ -245,7 +245,7 @@ module.exports = [
     },
     description: "Team members share their screens in turn and use https://jspaint.app/ to draw something that they're working on. The others guess what it is. The rules are similar to those of a Pictionary game: the person who is presenting is not allowed to talk or write words. And the drawing needs to happen while everyone is watching.",
     benefits: [
-      "It is very hard to draw the abstract things that we do all day - especially in JS Paint. This will make team members more comfortable with being vulnerability in front of the team.",
+      "It is very hard to draw the abstract things that we do all day - especially in JS Paint. This will make team members more comfortable with being vulnerable in front of the team.",
       "It's loads of fun.",
     ],
     tags: [
@@ -292,7 +292,7 @@ module.exports = [
     contributor: {
       github: "RabeaGleissner",
     },
-    description: "This one takes a bit of preparation and needs a facilitator. The facilitator sets up a channel for everyone to submit messages anonymously (Google Forms work well). Each team member needs to submit 2 - 3 updates ahead of the standup. The facilitator then reads out each update and the others have to guess who's update it is.",
+    description: "This one takes a bit of preparation and needs a facilitator. The facilitator sets up a channel for everyone to submit messages anonymously (Google Forms work well). Each team member needs to submit 2 - 3 updates ahead of the standup. The facilitator then reads out each update and the others have to guess whose update it is.",
     benefits: [
       "This makes people more aware of who is working on which task",
       "It helps to bond the team through a bit of fun.",
@@ -326,7 +326,7 @@ module.exports = [
     contributor: {
       github: "RabeaGleissner",
     },
-    description: "It doesn't matter if you listen to music all the time while you're working or not at all... Let your team members know which song you listened to last, wether it was just now while you were coding, during your run this morning or last week at the opera! You could even make a team playlist.",
+    description: "It doesn't matter if you listen to music all the time while you're working or not at all... Let your team members know which song you listened to last, whether it was just now while you were coding, during your run this morning or last week at the opera! You could even make a team playlist.",
     benefits: [
       "It's a nice excuse to talk about something more personal during stand up and bond with your team members that way.",
     ],
