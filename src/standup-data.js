@@ -236,4 +236,102 @@ module.exports = [
       'new view',
     ]
   },
+  {
+    slug: "js-paint-standup",
+    title: "Draw your update",
+    summary: "Each team member draws what they're working on in JS Paint and the others guess what it is.",
+    contributor: {
+      github: "RabeaGleissner",
+    },
+    description: "Team members share their screens in turn and use https://jspaint.app/ to draw something that they're working on. The others guess what it is. The rules are similar to those of a Pictionary game: the person who is presenting is not allowed to talk or write words. And the drawing needs to happen while everyone is watching.",
+    benefits: [
+      "It is very hard to draw the abstract things that we do all day - especially in JS Paint. This will make team members more comfortable with being vulnerability in front of the team.",
+      "It's loads of fun.",
+    ],
+    tags: [
+      'team bonding',
+    ]
+  },
+  {
+    slug: "ten-words",
+    title: "Use 10 words or less",
+    summary: "Give your update but don't use more than 10 words.",
+    contributor: {
+      github: "RabeaGleissner",
+    },
+    description: "Are your standups getting longer and longer? Try this one! Each team member can only use 10 words or less to give their update.",
+    benefits: [
+      "People will focus on communicating the most important thing.",
+      "It can potentially save you a lot of time.",
+    ],
+    tags: [
+      'communication',
+      'focus',
+    ]
+  },
+  {
+    slug: "last-three-commits",
+    title: "Last three commits",
+    summary: "Read your last three commit messages to the rest of the team.",
+    contributor: {
+      github: "RabeaGleissner",
+    },
+    description: "If you are a team member who doesn't make commits, read the last three email titles or the names of the last three files that you saved. If those messages are not self-explanatory, talk briefly about the context.",
+    benefits: [
+      "You'll get an insight into what others are working on right now. It can be especially interesting to see the messages from team members who do a different job from yourself. For example, if you're a programmer, the day-to-day work of a product manager might be unfamiliar to you.",
+    ],
+    tags: [
+      'team bonding',
+      'new view',
+    ]
+  },
+  {
+    slug: "guess-the-update",
+    title: "Guess who gave the update",
+    summary: "Each team member submits their updates ahead of time. In standup, everyone else has to guess who gave which update.",
+    contributor: {
+      github: "RabeaGleissner",
+    },
+    description: "This one takes a bit of preparation and needs a facilitator. The facilitator sets up a channel for everyone to submit messages anonymously (Google Forms work well). Each team member needs to submit 2 - 3 updates ahead of the standup. The facilitator then reads out each update and the others have to guess who's update it is.",
+    benefits: [
+      "This makes people more aware of who is working on which task",
+      "It helps to bond the team through a bit of fun.",
+    ],
+    tags: [
+      'team bonding',
+      'new view',
+    ]
+  },
+  {
+    slug: "what-you-learnt-last-week",
+    title: "Share one thing you learnt since last week",
+    summary: "Think of something you didn't know this time last week and that you know today.",
+    contributor: {
+      github: "RabeaGleissner",
+    },
+    description: "We learn things all the time but sometimes we don't even notice it. Think about what you did last week and what you learnt since. Share it with everyone else. Chances are that they didn't know this either and you're teaching them something new!",
+    benefits: [
+      "It makes people aware of how they're growing and what they're learning.",
+      "A good way to share knowledge across the team.",
+    ],
+    tags: [
+      'team bonding',
+      'communication',
+    ]
+  },
+  {
+    slug: "share-your-last-song",
+    title: "The last song you listened to before standup",
+    summary: "Tell the others which song you listened to last. Maybe even play it for them briefly, if they don't know it!",
+    contributor: {
+      github: "RabeaGleissner",
+    },
+    description: "It doesn't matter if you listen to music all the time while you're working or not at all... Let your team members know which song you listened to last, wether it was just now while you were coding, during your run this morning or last week at the opera! You could even make a team playlist.",
+    benefits: [
+      "It's a nice excuse to talk about something more personal during stand up and bond with your team members that way.",
+    ],
+    tags: [
+      'team bonding',
+    ]
+  },
 ];
