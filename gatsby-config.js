@@ -4,6 +4,7 @@ module.exports = {
     description: `Tired of having the same old Zoom call every day? Use these fun and creative standup formats to mix things up and learn more about your team and work.`,
     author: `Rouan Wilsenach`,
     twitterUsername: '@rouanw',
+    siteUrl: `https://funstandups.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,6 +30,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-lodash`,
+    'gatsby-plugin-sitemap',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
