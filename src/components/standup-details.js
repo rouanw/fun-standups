@@ -9,7 +9,7 @@ const StandupDetails = ({ pageContext }) => {
   const { standup } = pageContext
   return (
     <Layout>
-      <SEO title={`${standup.title}`} />
+      <SEO title={`${standup.title}`} description={`${standup.summary}`} />
       <div className="standup-details-wrapper">
         <div className="standup standup-details">
           <h2>{standup.title}</h2>
