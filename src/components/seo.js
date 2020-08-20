@@ -74,6 +74,10 @@ function SEO({ description, lang, meta, title, socialTitle }) {
         {
           name: `image`,
           content: `/bunnycow.png`,
+        },
+        {
+          name: `og:image`,
+          content: `https://rouanw.github.io/fun-standups/bunnycow.png`,
         }
       ].concat(meta)}
     />
