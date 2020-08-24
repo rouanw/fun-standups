@@ -20,5 +20,6 @@
 <url> <loc>https://funstandups.com/guess-the-update</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://funstandups.com/what-you-learnt-last-week</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://funstandups.com/share-your-last-song</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://funstandups.com/song-of-the-daily-battle</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://funstandups.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
