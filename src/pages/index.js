@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "../components/standup.css"
 import Standup from "../components/standup"
-import standups from "../standup-data"
+import standups from "../standup-data.json"
 import getTagColors from "../get-tag-colors"
 
 const filterStandupsByTag = (standups, tag) => standups.filter((standup) => standup.tags && standup.tags.includes(tag));

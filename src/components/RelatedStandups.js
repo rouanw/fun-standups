@@ -1,7 +1,7 @@
 import React from "react"
 
 import _ from 'lodash'
-import allStandups from "../standup-data"
+import allStandups from "../standup-data.json"
 import Standup from "./standup";
 import getTagColors from "../get-tag-colors";
 
