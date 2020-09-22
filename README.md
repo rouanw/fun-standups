@@ -1,6 +1,6 @@
 ## Contributing a standup format
 
-We'd love to have your standup format on the site. Please add your idea to [this file](https://github.com/rouanw/fun-standups/edit/master/src/standup-data.js) and submit a pull request. You can use the other standup formats in that file as examples.
+We'd love to have your standup format on the site. Please add your idea to [this file](https://github.com/rouanw/fun-standups/edit/master/src/standup-data.json) and submit a pull request. You can use the other standup formats in that file as examples.
 
 If you want to run the code locally, make sure you do an `npm install` after you cloned the code and then run `npm start`.
 
