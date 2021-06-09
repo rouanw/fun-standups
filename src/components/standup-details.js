@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "./layout"
 import SEO from "./seo"
-import "../components/standup-details.css"
+import "../components/standup-details.sass"
 import RelatedStandups from "../components/RelatedStandups"
 
 const StandupDetails = ({ pageContext }) => {

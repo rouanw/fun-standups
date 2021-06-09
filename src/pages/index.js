@@ -3,7 +3,7 @@ import _ from 'lodash'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import "../components/standup.css"
+import "../components/standup.sass"
 import Standup from "../components/standup"
 import standups from "../standup-data.json"
 import getTagColors from "../get-tag-colors"
