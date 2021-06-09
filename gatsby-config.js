@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: `https://funstandups.com`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
