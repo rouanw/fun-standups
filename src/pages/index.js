@@ -55,8 +55,8 @@ const IndexPage = () => {
             </button>
             <button className="tag tag-button random"
               onClick={() => {
-                setVisiblestandups([standups[Math.floor(Math.random() * standups.length)]])
-                setCurrentTag()
+                let randomUrl = [standups[Math.floor(Math.random() * standups.length)].slug]
+                window.location.assign(randomUrl)
               }}
             >
               random!
