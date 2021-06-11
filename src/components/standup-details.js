@@ -11,6 +11,7 @@ const StandupDetails = ({ pageContext }) => {
     <Layout>
       <SEO title={`${standup.title}`} description={`${standup.summary}`} />
       <div className="standup-details">
+        <a href="/" className="back-link" aria-label="Back to all stand-up formats.">←</a>
         <h1 className="standup-details--title">{standup.title}</h1>
         <p className="standup-details--summary">{standup.summary}</p>
         <p>{standup.description}</p>
