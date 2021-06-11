@@ -11,7 +11,7 @@ const RelatedStandups = ({ tags, title }) => {
   return Boolean(relatedStandups.length) && (
     <div className="related-standups">
       <h2 className="related-standups--header">Try these next</h2>
-      <ul>
+      <ul className="standups">
         {relatedStandups.map((standup) => <Standup key={standup.title} standup={standup} tagColors={getTagColors()} />)}
       </ul>
     </div>
