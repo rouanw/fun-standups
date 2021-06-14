@@ -20,7 +20,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" socialTitle />
       <div className="page-header">
-        <h1>Tired of having the same old Zoom call every day?</h1>
+        <h1>Tired of  having the same old Zoom call every day?</h1>
         <p>Use these fun and creative standup formats to mix things up and learn more about your team and work.</p>
       </div>
       <div className="standup-navigation">
@@ -30,7 +30,10 @@ const IndexPage = () => {
             window.location.assign(randomUrl)
           }}
         >Gimme a random format!</button>
-        <ul className="tags">
+        <ul
+          className="tags"
+          role="radiogroup"
+          aria-controls="standups">
           {
             availableTags.map((tag) => (
               <li>
@@ -40,28 +43,31 @@ const IndexPage = () => {
                     setCurrentTag(tag)
                     setVisiblestandups(filterStandupsByTag(standups, tag))
                   }}
+                  aria-role="radio"
+                  aria-checked={tag === currentTag ? 'true' : 'false'}
                   style={{
-                    color: tagColors[tag],
-                    fontWeight: tag === currentTag ? 'bold' : 'normal',
-                    opacity: !currentTag || tag === currentTag ? 1 : 0.5
+                    color: tag === currentTag ? 'white' : tagColors[tag]
                   }}
                   key={tag}
                 >{tag}</button>
               </li>
             ))
           }
-          <li>
-            <button
-              className="button -show-all"
-              onClick={() => {
-                setCurrentTag()
-                setVisiblestandups(standups)
-              }}
-            >Show all</button>
-          </li>
         </ul>
+        <div className="clear-button-wrapper" aria-live="polite">
+          <button
+            className="button -clear"
+            onClick={() => {
+              setCurrentTag()
+              setVisiblestandups(standups)
+            }}
+            style={{
+              visibility: currentTag ? 'visible' : 'hidden'
+            }}
+          ><span aria-hidden="true">×</span> Clear selection</button>
+        </div>
       </div>
-      <ul className="standups">
+      <ul id="standups" className="standups">
         {visiblestandups.map((standup) => <Standup key={standup.title} standup={standup} tagColors={tagColors}></Standup>)}
       </ul>
     </Layout>
