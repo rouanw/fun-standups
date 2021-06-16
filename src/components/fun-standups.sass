@@ -1,0 +1,446 @@
+
+// ______,,,^._.^,,,______
+
+// functions and variables
+
+// ¯¯¯¯¯¯¯''' U '''¯¯¯¯¯¯¯
+
+// functions
+@function m($multiplier: 1)
+  @return $multiplier * 1rem
+
+
+// swatches
+$color-waxen-white: #ffffff
+$color-ashen-apparition: #f4f4f4
+$color-callous-charcoal: #2b3547
+$color-gauche-gray: #43526f
+$color-pompous-purple: #800080
+$color-risque-red: #b3002e
+
+
+// ui colours
+$color-foreground: $color-callous-charcoal
+$color-background: $color-waxen-white
+$color-background-accent: $color-ashen-apparition
+
+$color-text: $color-callous-charcoal
+$color-text-light: $color-gauche-gray
+
+$color-link: $color-pompous-purple
+$color-focus: $color-callous-charcoal
+
+$color-alert: $color-risque-red
+
+$fun-gradient: linear-gradient(-20deg, $color-foreground, $color-pompous-purple)
+
+
+// font sizes
+$font-size-xl: 3.5rem
+$font-size-l: 2.4rem
+$font-size-m: 1.8rem
+$font-size-body: 1.125rem
+$font-size-small: 1rem
+
+$font-family-body: Arial, sans-serif
+$font-family-header: 'Montserrat', 'Arial Black', Arial, sans-serif
+
+
+// font weights
+$font-weight-body: 400
+$font-weight-header: 900
+
+
+// line height
+$line-height-body: 1.4
+$line-height-header: 1.1
+
+
+// padding / margin
+$padding-s: m(0.5)
+$padding-m: m(1)
+$padding-l: m(2)
+$padding-xl: m(4)
+
+$padding-text: m(0.75)
+
+$padding-vertical-flow: 10vh
+
+$focus-width: m(0.25)
+
+
+// transitions
+$transition-timing: 260ms
+$transition-easing: ease-in-out
+
+$transition-defaults: $transition-timing $transition-easing
+
+
+// misc
+$border-radius: 0.725rem
+
+
+
+// __,,,^._.^,,,__
+
+// font face
+
+// ¯¯¯''' U '''¯¯¯
+
+// montserrat
+@font-face
+  font:
+    family: 'Montserrat'
+    style: normal
+    weight: 900
+    display: swap
+  src: url(../fonts/montserrat.woff2) format('woff2')
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+
+
+
+// _________,,,^._.^,,,_________
+
+// typography and basic lay-out
+
+// ¯¯¯¯¯¯¯¯¯¯''' U '''¯¯¯¯¯¯¯¯¯¯
+
+body
+  padding: $padding-m
+  font:
+    family: $font-family-body
+    size: $font-size-body
+    weight: $font-weight-body
+  line-height: $line-height-body
+  color: $color-text
+  background-color: $color-background
+
+h1,
+h2,
+h3,
+h4
+  font:
+    family: $font-family-header
+    weight: $font-weight-header
+  line-height: $line-height-header
+
+h1
+  font-size: $font-size-l
+
+  @media (min-width: #{m(60)})
+    font-size: $font-size-xl
+
+h1.display
+  text-transform: uppercase
+
+  @supports (background-clip: text)
+    -webkit-text-fill-color: transparent
+    background:
+      image: $fun-gradient
+      clip: text
+      size: cover
+
+h2
+  font-size: $font-size-m
+
+p + p,
+li + li
+  margin-top: $padding-text
+
+ul
+  margin:
+    top: #{$padding-text * 2}
+    bottom: #{$padding-text * 2}
+
+header,
+main,
+footer
+  max-width: m(70)
+  margin:
+    right: auto
+    left: auto
+
+header
+  margin-top: #{$padding-vertical-flow / 2}
+
+main,
+footer
+  margin-top: $padding-vertical-flow
+
+
+
+
+// ___________,,,^._.^,,,___________
+
+// links, buttons, card hover/focus
+
+// ¯¯¯¯¯¯¯¯¯¯¯¯''' U '''¯¯¯¯¯¯¯¯¯¯¯¯
+
+a
+  color: $color-link
+
+a,
+.button,
+.standup
+  position: relative
+
+.standup--title a
+  position: static
+
+a,
+.button
+  &::after
+    content: ''
+    position: absolute
+    top: m(-0.75)
+    right: m(-0.75)
+    bottom: m(-0.75)
+    left: m(-0.75)
+    border: $focus-width solid $color-focus
+    border-radius: #{$border-radius + 0.5}
+    opacity: 0
+    transform: scale3d(0.9, 0.8, 1)
+    transition: transform $transition-defaults, opacity $transition-defaults
+
+  &:focus
+    outline: 0
+
+  &:hover::after,
+  &:focus::after
+    transform: scale3d(1, 1, 1)
+    opacity: 1
+
+  &:active
+    transform: scale3d(0.85, 0.85, 1)
+
+.button.-primary
+  display: block
+  width: 100%
+  padding: $padding-m $padding-l
+  position: relative
+  border-radius: $border-radius
+  background:
+    color: $color-link
+    image: $fun-gradient
+  color: $color-background
+  font-weight: bold
+
+  @media (min-width: #{m(32)})
+    width: auto
+
+.button.-tag,
+.back-link
+  display: inline-block
+  padding:
+    right: m(1.25)
+    left: m(1.25)
+  border-radius: m(1.25)
+  background-color: $color-background-accent
+  color: $color-text
+  line-height: m(2.5)
+  text-decoration: none
+
+  &[aria-checked='true']
+    background:
+      color: $color-foreground
+      image: $fun-gradient
+    color: $color-background
+
+  &::after
+    border-radius: m(2.15)
+
+.button.-tag.-clear
+  border: 0
+  color: $color-alert
+  background-color: transparent
+
+
+
+// __,,,^._.^,,,__
+
+// masthead
+
+// ¯¯¯''' U '''¯¯¯
+
+.masthead a
+  display: block
+  max-width: m(12)
+
+  @media (min-width: #{m(60)})
+    max-width: m(16)
+
+
+
+// __,,,^._.^,,,__
+
+// footer
+
+// ¯¯¯''' U '''¯¯¯
+
+footer
+  margin-top: $padding-l
+  padding: $padding-l
+  border-radius: $border-radius
+  color: $color-text-light
+  background-color: $color-background-accent
+  font-size: $font-size-small
+
+
+
+// __,,,^._.^,,,__
+
+// page header
+// standup details
+
+// ¯¯¯''' U '''¯¯¯
+
+.page-header,
+.standup-details
+  max-width: m(40)
+  margin-bottom: $padding-vertical-flow
+
+  @media (min-width: #{m(70)})
+    padding-left: $padding-l
+    border-left: 1px solid
+
+  h1
+    margin-bottom: $padding-l
+
+.page-header
+  button
+    margin-top: $padding-l
+
+.standup-details
+  margin-top: #{$padding-vertical-flow / 2}
+
+.standup-details--summary
+  color: $color-text-light
+  font-weight: bold
+
+.standup-details--benefit
+  position: relative
+  list-style: none
+
+  &::before
+    content: '👍'
+    display: block
+    width: m(1.75)
+    height: m(1.5)
+    position: absolute
+    left: -2em
+
+.standup-details--contributor
+  margin:
+    top: $padding-l
+    bottom: $padding-l
+  color: $color-text-light
+  font-size: $font-size-small
+
+
+
+// ____,,,^._.^,,,____
+
+// tag navigation
+
+// ¯¯¯¯¯''' U '''¯¯¯¯¯
+
+.standup-navigation li
+  margin: $padding-s m(0.65)
+
+.tags
+  display: none
+  flex-flow: row wrap
+  align-items: center
+  width: fit-content
+  list-style: none
+
+  margin-left: #{$padding-s * -1}
+
+  @media (min-width: #{m(32)})
+    display: flex
+
+
+
+// ____,,,^._.^,,,____
+
+// standups
+
+// ¯¯¯¯¯''' U '''¯¯¯¯¯
+
+// uncomment below when stand-up swithching finalised
+// #standups
+  // transition: opacity $transition-defaults
+
+.standups
+  margin-left: 0
+  list-style: none
+
+  @media (min-width: #{m(42)})
+    display: grid
+    grid:
+      template-columns: 1fr 1fr
+      template-rows: auto
+      gap: $padding-xl
+
+  @media (min-width: #{m(60)})
+    grid-template-columns: 1fr 1fr 1fr
+
+.standup
+  display: flex
+  flex-direction: column
+  padding: $padding-l
+  border-radius: $border-radius
+  transform: translate3d(0, #{m(0)}, 0)
+  transition: transform $transition-defaults
+
+  &:hover,
+  &:focus
+    transform: translate3d(0, #{m(-1)}, 0)
+
+.standup a::after
+  box-shadow: 0 m(1) m(2.5) rgba(black, 0.16)
+
+.standup--title,
+.standup--summary
+  margin-bottom: $padding-m
+
+.standup--title a
+  color: $color-text
+  text-decoration: none
+
+.standup--summary
+  color: $color-text-light
+
+.standup--tags
+  margin: auto m(-0.5) 0 m(-0.5)
+  font-size: $font-size-small
+
+  .tag
+    display: inline-block
+    margin:
+      right: $padding-s
+      left: $padding-s
+
+
+
+// ____,,,^._.^,,,____
+
+// related standups
+
+// ¯¯¯¯¯''' U '''¯¯¯¯¯
+
+.related-standups
+  padding: $padding-m
+  border-radius: $border-radius
+  background-color: $color-background-accent
+
+.related-standups--header
+  margin:
+    top: $padding-m
+    bottom: $padding-m
+    left: $padding-l
+  font:
+    family: $font-family-body
+    size: $font-size-body
+    weight: bold
+  line-height: $line-height-body
