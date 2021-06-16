@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "./layout"
 import SEO from "./seo"
-import "../components/standup-details.sass"
+import "../components/fun-standups.sass"
 import RelatedStandups from "../components/RelatedStandups"
 
 const StandupDetails = ({ pageContext }) => {
@@ -10,16 +10,16 @@ const StandupDetails = ({ pageContext }) => {
   return (
     <Layout>
       <SEO title={`${standup.title}`} description={`${standup.summary}`} />
+      <a href="/" className="back-link"><span aria-hidden="true">← </span>All ideas</a>
       <div className="standup-details">
-        <a href="/" className="back-link" aria-label="Back to all stand-up formats.">←</a>
         <h1 className="standup-details--title">{standup.title}</h1>
         <p className="standup-details--summary">{standup.summary}</p>
         <p>{standup.description}</p>
         <ul>
-          {standup.benefits.map((benefit)=><li key={benefit.slice(0, 10)} className="benefit">{benefit}</li>)}
+          {standup.benefits.map((benefit)=><li key={benefit.slice(0, 10)} className="standup-details--benefit">{benefit}</li>)}
         </ul>
         { standup.contributor && standup.contributor.github && (
-          <p className="contributor">
+          <p className="standup-details--contributor">
             Contributed by <a
               href={`https://github.com/${standup.contributor.github}`}
               rel="noopener noreferrer"
