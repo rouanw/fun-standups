@@ -9,15 +9,15 @@ const Standup = ({ standup, tagColors }) => {
         <a href={`/${slug}`}>{title}</a>
       </h2>
       <p className="standup--summary">{summary}</p>
-      <div className="standup--tags">
+      <ul className="standup--tags">
         {tags.map((tag)=> (
-          <span key={tag} className="tag" style={{
+          <li key={tag} className="standup--tag" style={{
             color: tagColors ? tagColors[tag] : 'grey',
           }}>
             {tag}
-          </span>
+          </li>
         ))}
-      </div>
+      </ul>
     </li>
   )
 }
