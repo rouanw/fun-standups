@@ -23,8 +23,8 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" socialTitle />
       <section className="page-header">
-        <h1 class="display">Remote-friendly standup ideas for your team</h1>
-        <p>Tired of  having the same old Zoom call every day?</p>
+        <h1 className="display">Remote-friendly standup ideas for your team</h1>
+        <p>Tired of having the same old Zoom call every day?</p>
         <p>Use these fun and creative standup formats to mix things up and learn more about your team and work.</p>
         <button className="button -primary"
           onClick={() => {
@@ -35,35 +35,34 @@ const IndexPage = () => {
       </section>
 
       <nav className="standup-navigation">
-        <ul
-          className="tags"
+        <p id="filter-label">Filter:</p>
+        <div
+          className="standup-filters"
           role="radiogroup"
+          aria-labelledby="filter-label"
           aria-controls="standups">
-
-          <li>Filter:</li>
           {
-            availableTags.map((tag) => (
-              <li>
-                <button
-                  className="button -tag"
-                  onClick={() => {
-                    setHidingStandups(true)
-                    setTimeout(() => {
-                      setVisiblestandups(filterStandupsByTag(standups, tag))
-                    }, transitionTiming)
-                    setCurrentTag(tag)
-                  }}
-                  aria-role="radio"
-                  aria-checked={tag === currentTag ? 'true' : 'false'}
-                  style={{
-                    color: tag === currentTag ? 'white' : tagColors[tag]
-                  }}
-                  key={tag}
-                >{tag}</button>
-              </li>
+            availableTags.map((tag, index) => (
+              <button
+                key={index}
+                className="button -tag"
+                onClick={() => {
+                  setHidingStandups(true)
+                  setTimeout(() => {
+                    setVisiblestandups(filterStandupsByTag(standups, tag))
+                  }, transitionTiming)
+                  setCurrentTag(tag)
+                }}
+                role="radio"
+                aria-checked={tag === currentTag ? 'true' : 'false'}
+                style={{
+                  color: tag === currentTag ? 'white' : tagColors[tag]
+                }}
+                key={tag}
+              >{tag}</button>
             ))
           }
-          <li aria-live="polite">
+          <span aria-live="polite">
             <button
               className="button -tag -clear"
               onClick={() => {
@@ -78,8 +77,8 @@ const IndexPage = () => {
                 display: currentTag ? 'block' : 'none'
               }}
             ><span aria-hidden="true">× </span>Clear filter</button>
-          </li>
-        </ul>
+          </span>
+        </div>
       </nav>
 
       <ul

@@ -12,7 +12,7 @@
 
 // swatches
 $color-waxen-white: #ffffff
-$color-ashen-apparition: #f4f4f4
+$color-ashen-apparition: #f5f5f5
 $color-callous-charcoal: #2b3547
 $color-gauche-gray: #43526f
 $color-pompous-purple: #800080
@@ -344,21 +344,28 @@ footer
 
 // ¯¯¯¯¯''' U '''¯¯¯¯¯
 
-.standup-navigation li
-  margin: $padding-s m(0.65)
-
-.tags
+.standup-navigation
   display: none
-  flex-flow: row wrap
-  align-items: center
-  width: fit-content
-  list-style: none
-
-  margin-left: #{$padding-s * -1}
 
   @media (min-width: #{m(32)})
     display: flex
+    flex-flow: column wrap
 
+  @media (min-width: #{m(32)})
+    flex-flow: row wrap
+    align-items: center
+
+.standup-navigation p,
+.standup-navigation button
+  display: block
+  margin: $padding-s m(0.65)
+
+.standup-navigation p
+  margin-left: 0
+
+.standup-filters
+  display: flex
+  flex-flow: row wrap
 
 
 // ____,,,^._.^,,,____
