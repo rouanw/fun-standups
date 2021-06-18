@@ -368,8 +368,12 @@ footer
 // ¯¯¯¯¯''' U '''¯¯¯¯¯
 
 // uncomment below when stand-up swithching finalised
-// #standups
-  // transition: opacity $transition-defaults
+.standups
+  opacity: 1
+  //transition: opacity 400ms $transition-easing
+
+  &.-hidden
+    opacity: 0
 
 .standups
   margin-left: 0

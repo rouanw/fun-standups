@@ -16,6 +16,9 @@ const tagColors = getTagColors();
 const IndexPage = () => {
   const [visiblestandups, setVisiblestandups] = useState(standups)
   const [currentTag, setCurrentTag] = useState()
+  const [isHidingStandups, setHidingStandups] = useState(false)
+  const transitionTiming = 400
+
   return (
     <Layout>
       <SEO title="Home" socialTitle />
@@ -44,7 +47,10 @@ const IndexPage = () => {
                 <button
                   className="button -tag"
                   onClick={() => {
-                    setVisiblestandups(filterStandupsByTag(standups, tag))
+                    setHidingStandups(true)
+                    setTimeout(() => {
+                      setVisiblestandups(filterStandupsByTag(standups, tag))
+                    }, transitionTiming)
                     setCurrentTag(tag)
                   }}
                   aria-role="radio"
@@ -61,8 +67,12 @@ const IndexPage = () => {
             <button
               className="button -tag -clear"
               onClick={() => {
+                setHidingStandups(true)
+                setTimeout(() => {
+                  setVisiblestandups(standups)
+                }, transitionTiming)
+                setHidingStandups(true)
                 setCurrentTag()
-                setVisiblestandups(standups)
               }}
               style={{
                 display: currentTag ? 'block' : 'none'
@@ -72,7 +82,15 @@ const IndexPage = () => {
         </ul>
       </nav>
 
-      <ul id="standups" className="standups">
+      <ul
+        id="standups"
+        className="standups"
+        style={{
+          transition: `opacity ${transitionTiming}ms ease-in-out`,
+          opacity: `${isHidingStandups ? 0 : 1}`
+        }}
+        onTransitionEnd={() => setHidingStandups(false)}
+      >
         {visiblestandups.map((standup) => <Standup key={standup.title} standup={standup} tagColors={tagColors}></Standup>)}
       </ul>
     </Layout>
