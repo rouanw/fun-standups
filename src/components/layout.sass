@@ -1,0 +1,41 @@
+:root
+  box-sizing: border-box
+
+*,
+*::before,
+*::after
+  box-sizing: inherit
+  margin: 0
+  padding: 0
+  border: 0
+
+  @media (prefers-reduced-motion: reduce)
+    animation: none !important
+    transition: none !important
+
+html,
+body
+  overflow-x: hidden
+
+img
+  display: block
+  width: 100%
+  height: auto
+
+input,
+textarea,
+select,
+button
+  font: inherit
+  letter-spacing: inherit
+  color: inherit
+
+button *
+  pointer-events: none
+
+ul
+  margin-left: 2em
+  list-style-type: disc
+
+[hidden]
+  display: none !important

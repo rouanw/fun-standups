@@ -13,8 +13,8 @@
       "You may notice which bits of the standup end up getting forgotten. Are these important at all or could you have done without them?"
     ],
     "tags": [
-      "communication",
-      "team bonding"
+      "Communication",
+      "Team bonding"
     ]
   },
   {
@@ -31,8 +31,8 @@
       "Maybe you already know most of what you need to know before you even get to standup"
     ],
     "tags": [
-      "communication",
-      "team bonding"
+      "Communication",
+      "Team bonding"
     ]
   },
   {
@@ -49,8 +49,8 @@
       "This helps team members to focus on useful information. It’s easier to keep an update to the point when you’re talking to a particular person."
     ],
     "tags": [
-      "team bonding",
-      "communication"
+      "Team bonding",
+      "Communication"
     ]
   },
   {
@@ -66,8 +66,8 @@
       "Can help highlight when some team members are not included in daily work enough or don't have enough opportunities to let others see what they do"
     ],
     "tags": [
-      "team bonding",
-      "communication"
+      "Team bonding",
+      "Communication"
     ]
   },
   {
@@ -83,7 +83,7 @@
       "Helps encourage team members to use other communication channels to talk about things that aren’t crucial for standup - i.e. it encourages people to actually talk to each other outside of standup."
     ],
     "tags": [
-      "focus"
+      "Focus"
     ]
   },
   {
@@ -101,8 +101,8 @@
       "Helps you notice when the view of the larger plan isn't in a format that makes sense to people"
     ],
     "tags": [
-      "communication",
-      "new view"
+      "Communication",
+      "New view"
     ]
   },
   {
@@ -119,8 +119,8 @@
       "Promotes a deeper understanding of work people aren’t directly involved in"
     ],
     "tags": [
-      "focus",
-      "new view"
+      "Focus",
+      "New view"
     ]
   },
   {
@@ -135,7 +135,7 @@
       "This is a tried-and-tested format and a good one to fall back on"
     ],
     "tags": [
-      "classic"
+      "Classic"
     ]
   },
   {
@@ -151,8 +151,8 @@
       "Leads to a standup that is future/action focused"
     ],
     "tags": [
-      "focus",
-      "classic"
+      "Focus",
+      "Classic"
     ]
   },
   {
@@ -168,7 +168,7 @@
       "Notice how long your standup is - a long standup could mean your team is having to wade through a lot to get there work done. A short standup? Great!"
     ],
     "tags": [
-      "classic"
+      "Classic"
     ]
   },
   {
@@ -184,7 +184,7 @@
       "A good way of ensuring that no work goes forgotten"
     ],
     "tags": [
-      "classic"
+      "Classic"
     ]
   },
   {
@@ -201,7 +201,7 @@
       "You'll probably learn things that will make your job easier"
     ],
     "tags": [
-      "team bonding"
+      "Team bonding"
     ]
   },
   {
@@ -217,7 +217,7 @@
       "You may notice that the team still communicates fine without talking specifically about the status of what they’re working on"
     ],
     "tags": [
-      "team bonding"
+      "Team bonding"
     ]
   },
   {
@@ -233,7 +233,7 @@
       "Could reveal if the metrics being used to measure success are flawed, or maybe not visible enough to the team."
     ],
     "tags": [
-      "new view"
+      "New view"
     ]
   },
   {
@@ -249,7 +249,7 @@
       "It's loads of fun."
     ],
     "tags": [
-      "team bonding"
+      "Team bonding"
     ]
   },
   {
@@ -265,8 +265,8 @@
       "It can potentially save you a lot of time."
     ],
     "tags": [
-      "communication",
-      "focus"
+      "Communication",
+      "Focus"
     ]
   },
   {
@@ -281,8 +281,8 @@
       "You'll get an insight into what others are working on right now. It can be especially interesting to see the messages from team members who do a different job from yourself. For example, if you're a programmer, the day-to-day work of a product manager might be unfamiliar to you."
     ],
     "tags": [
-      "team bonding",
-      "new view"
+      "Team bonding",
+      "New view"
     ]
   },
   {
@@ -298,8 +298,8 @@
       "It helps to bond the team through a bit of fun."
     ],
     "tags": [
-      "team bonding",
-      "new view"
+      "Team bonding",
+      "New view"
     ]
   },
   {
@@ -315,8 +315,8 @@
       "A good way to share knowledge across the team."
     ],
     "tags": [
-      "team bonding",
-      "communication"
+      "Team bonding",
+      "Communication"
     ]
   },
   {
@@ -331,7 +331,7 @@
       "It's a nice excuse to talk about something more personal during stand up and bond with your team members that way."
     ],
     "tags": [
-      "team bonding"
+      "Team bonding"
     ]
   },
   {
@@ -346,7 +346,7 @@
       "It is a good way of closing the standup and learn something about the musical preferences of your fellows. "
     ],
     "tags": [
-      "team bonding"
+      "Team bonding"
     ]
   }
 ]

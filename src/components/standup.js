@@ -4,24 +4,21 @@ import React from "react"
 const Standup = ({ standup, tagColors }) => {
   const { title, summary, slug, tags = [] } = standup;
   return (
-    <div className="standup-wrapper">
-      <a href={`/${slug}`}>
-        <div className="standup standup-card">
-          <div className="standup-title">{title}</div>
-          <div className="standup-summary">{summary}</div>
-          <div className="standup-tags">
-            {tags.map((tag)=> (
-              <span key={tag} className="tag" style={{
-                backgroundColor: tagColors ? tagColors[tag] : 'grey',
-              }}
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </a>
-    </div>
+    <li className="standup">
+      <h2 className="standup--title">
+        <a href={`/${slug}`}>{title}</a>
+      </h2>
+      <p className="standup--summary">{summary}</p>
+      <ul className="standup--tags">
+        {tags.map((tag)=> (
+          <li key={tag} className="standup--tag" style={{
+            color: tagColors ? tagColors[tag] : 'grey',
+          }}>
+            {tag}
+          </li>
+        ))}
+      </ul>
+    </li>
   )
 }
 
