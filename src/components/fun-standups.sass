@@ -169,6 +169,20 @@ footer
 
 
 
+// __,,,^._.^,,,__
+
+// visually hidden
+
+// ¯¯¯''' U '''¯¯¯
+
+.visually-hidden
+  position: absolute !important
+  width: 1px !important
+  height: 1px !important
+  overflow: hidden !important
+  clip: rect(1px, 1px, 1px 1px)
+
+
 
 // ___________,,,^._.^,,,___________
 
@@ -248,11 +262,6 @@ a,
 
   &::after
     border-radius: m(2.15)
-
-.button.-tag.-clear
-  border: 0
-  color: $color-alert
-  background-color: transparent
 
 
 
@@ -368,16 +377,18 @@ footer
   flex-flow: row wrap
 
 
+
 // ____,,,^._.^,,,____
 
 // standups
 
 // ¯¯¯¯¯''' U '''¯¯¯¯¯
 
-// uncomment below when stand-up swithching finalised
+#standup-count
+  @extend .visually-hidden
+
 .standups
   opacity: 1
-  //transition: opacity 400ms $transition-easing
 
   &.-hidden
     opacity: 0
