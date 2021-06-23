@@ -41,6 +41,19 @@ const IndexPage = () => {
           role="radiogroup"
           aria-labelledby="filter-label"
           aria-controls="standups">
+          <button
+            className="button -tag"
+            onClick={() => {
+              setHidingStandups(true)
+              setTimeout(() => {
+                setVisiblestandups(standups)
+                setHidingStandups(false)
+              }, transitionTiming)
+              setCurrentTag()
+            }}
+            role="radio"
+            aria-checked={currentTag ? 'false' : 'true'}
+          >Show all</button>
           {
             availableTags.map((tag, index) => (
               <button
@@ -62,24 +75,10 @@ const IndexPage = () => {
               >{tag}</button>
             ))
           }
-          <span aria-live="polite">
-            <button
-              className="button -tag -clear"
-              onClick={() => {
-                setHidingStandups(true)
-                setTimeout(() => {
-                  setVisiblestandups(standups)
-                }, transitionTiming)
-                setHidingStandups(true)
-                setCurrentTag()
-              }}
-              style={{
-                display: currentTag ? 'block' : 'none'
-              }}
-            ><span aria-hidden="true">× </span>Clear filter</button>
-          </span>
         </div>
       </nav>
+
+      <p id="standup-count" aria-live="assertive">{`Showing ${visiblestandups.length} stand-ups.`}</p>
 
       <ul
         id="standups"
