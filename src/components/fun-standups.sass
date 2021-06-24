@@ -228,9 +228,11 @@ a,
     transform: scale3d(0.85, 0.85, 1)
 
 .button.-primary
-  display: block
+  display: inline-block
   width: 100%
   padding: $padding-m $padding-l
+  margin:
+    right: $padding-l
   position: relative
   border-radius: $border-radius
   background:
@@ -238,7 +240,26 @@ a,
     image: $fun-gradient
   color: $color-background
   font-weight: bold
+  margin-bottom: $padding-m
+  @media (min-width: #{m(32)})
+    width: auto
 
+.button.-secondary
+  display: inline-block
+  width: 100%
+  padding: $padding-m $padding-l
+  position: relative
+  border-radius: $border-radius
+  background:
+    color: white
+  color: black
+  font-weight: bold
+  text-decoration: none
+  text-align: center
+  border:
+    style: solid
+    color: $color-link
+    width: 2px
   @media (min-width: #{m(32)})
     width: auto
 

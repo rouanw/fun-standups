@@ -26,12 +26,15 @@ const IndexPage = () => {
         <h1 className="display">Remote-friendly standup ideas for your team</h1>
         <p>Tired of having the same old Zoom call every day?</p>
         <p>Use these fun and creative standup formats to mix things up and learn more about your team and work.</p>
-        <button className="button -primary"
-          onClick={() => {
-            let randomUrl = [standups[Math.floor(Math.random() * standups.length)].slug]
-            window.location.assign(randomUrl)
-          }}
-        >Gimme a random idea!</button>
+        <div>
+          <button className="button -primary"
+            onClick={() => {
+              let randomUrl = [standups[Math.floor(Math.random() * standups.length)].slug]
+              window.location.assign(randomUrl)
+            }}
+          >Gimme a random idea!</button>
+          <a className="button -secondary" href="https://forms.gle/QtQXGZ3E3UCaMnoG9">I have an idea...</a>
+        </div>
       </section>
 
       <nav className="standup-navigation">
