@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
           Do you have a standup format you'd like to see here? It's
           {` `}
           <a
-            href="https://github.com/rouanw/fun-standups#contributing-a-standup-format"
+            href="https://forms.gle/QtQXGZ3E3UCaMnoG9"
             rel="noopener noreferrer"
           >easy to add</a>
           {` `}
