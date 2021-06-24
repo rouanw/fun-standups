@@ -242,6 +242,9 @@ a,
 .button.-secondary
   font-weight: bold
 
+  @media (max-width: #{m(32)})
+    width: 100%
+
 .button.-primary
   background:
     color: $color-link
@@ -276,14 +279,17 @@ a,
 
 .buttons
   display: flex
-  flex-flow: row wrap
+  flex-flow: column nowrap
   align-items: center
 
   & > *
     margin: $padding-s m(0.65)
 
-  & > *:first-child
-    margin-left: 0
+  @media (min-width: #{m(32)})
+    flex-flow: row wrap
+
+    & > *:first-child
+      margin-left: 0
 
 
 
