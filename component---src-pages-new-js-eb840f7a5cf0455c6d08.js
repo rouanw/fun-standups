@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfun_standups=self.webpackChunkfun_standups||[]).push([[468],{4260:function(e,n,t){t.r(n);var a=t(7294),u="https://forms.gle/QtQXGZ3E3UCaMnoG9";n.default=function(){return(0,a.useEffect)((function(){window.location.replace(u)}),[]),a.createElement("div",null,"Redirecting to a page where you can ",a.createElement("a",{href:u},"create a new standup format")," ")}}}]);
+//# sourceMappingURL=component---src-pages-new-js-eb840f7a5cf0455c6d08.js.map
