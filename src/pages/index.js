@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import _ from 'lodash'
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import "../components/fun-standups.sass"
 import Standup from "../components/standup"
 import standups from "../standup-data.json"
@@ -21,7 +21,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" socialTitle />
+      <Seo title="Home" socialTitle />
       <section className="page-header">
         <h1 className="display">Remote-friendly standup ideas for your team</h1>
         <div>
@@ -67,7 +67,6 @@ const IndexPage = () => {
           {
             availableTags.map((tag, index) => (
               <button
-                key={index}
                 className="button -tag"
                 onClick={() => {
                   setHidingStandups(true)

@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "./layout"
-import SEO from "./seo"
+import Seo from "./seo"
 import "../components/fun-standups.sass"
 import RelatedStandups from "../components/RelatedStandups"
 
@@ -9,7 +9,7 @@ const StandupDetails = ({ pageContext }) => {
   const { standup } = pageContext
   return (
     <Layout>
-      <SEO title={`${standup.title}`} description={`${standup.summary}`} />
+      <Seo title={`${standup.title}`} description={`${standup.summary}`} />
       <a href="/" className="back-link"><span aria-hidden="true">← </span>All ideas</a>
       <div className="standup-details">
         <h1 className="standup-details--title">{standup.title}</h1>
