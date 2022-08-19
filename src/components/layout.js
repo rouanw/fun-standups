@@ -50,6 +50,9 @@ const Layout = ({ children }) => {
           {` `}
           and we'd love it!
         </p>
+        <p>
+          Made with ❤️ by <a href="https://www.rouanw.com">Rouan Wilsenach</a>
+        </p>
       </footer>
     </>
   )
