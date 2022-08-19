@@ -6,7 +6,7 @@ const Standup = ({ standup, tagColors }) => {
   return (
     <li className="standup">
       <h2 className="standup--title">
-        <a href={`/${slug}`}>{title}</a>
+        <a className="standup--link" href={`/${slug}`}>{title}</a>
       </h2>
       <p className="standup--summary">{summary}</p>
       <ul className="standup--tags">

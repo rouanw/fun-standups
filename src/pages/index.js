@@ -35,7 +35,7 @@ const IndexPage = () => {
               let randomUrl = [standups[Math.floor(Math.random() * standups.length)].slug]
               window.location.assign(randomUrl)
             }}
-          >Gimme a random idea!</button>
+          >Random standup idea!</button>
           <a
             className="button -secondary"
             href="https://forms.gle/QtQXGZ3E3UCaMnoG9"
