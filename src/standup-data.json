@@ -383,5 +383,23 @@
       "Communication",
       "New view"
     ]
+  },
+  {
+    "slug": "shakespearean-standup",
+    "title": "Shakespearean Standup",
+    "summary": "Write a poem about the things you did yesterday, you are going to do today and your blockers.",
+    "contributor": {
+      "github": "leonhuzen"
+    },
+    "description": "You're allowed to use simple poems like the classic \"roses are red\", \"Mary had a little lamb\", or go ludicrous like a true William Shakespeare and baffle your teammates with your extensive vocabulary.",
+    "benefits": [
+      "Poems are easy to remember, so teammates will likely (finally) remember what you told during the standup.",
+      "Better vocabulary; it let's you think about different words to describe the topics you want to discuss.",
+      "You can discover your inner Shakespeare!"
+    ],
+    "tags": [
+      "Communication",
+      "Team bonding"
+    ]
   }
 ]
