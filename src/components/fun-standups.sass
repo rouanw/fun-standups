@@ -333,6 +333,19 @@ footer
 
 // ¯¯¯''' U '''¯¯¯
 
+.hero
+  display: flex
+  flex-direction: column
+  @media (min-width: #{m(50)})
+    flex-direction: row
+
+.hero-image
+  max-width: m(40)
+  max-height: m(40)
+  display: none
+  @media (min-width: #{m(50)})
+    display: block
+
 .page-header,
 .standup-details
   max-width: m(40)

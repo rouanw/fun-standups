@@ -31,14 +31,7 @@ const Layout = ({ children }) => {
 
       <footer>
         <p>
-          All original content is licensed under the
-          {` `}
-          <a
-            href="https://creativecommons.org/licenses/by-sa/4.0/"
-            rel="noopener noreferrer"
-          >Creative Commons Attribution-ShareAlike 4.0 International</a>
-          {` `}
-          license.
+          Made with ❤️ by <a href="https://www.rouanw.com">Rouan Wilsenach</a>
         </p>
         <p>
           Do you have a standup format you'd like to see here? It's
@@ -51,7 +44,17 @@ const Layout = ({ children }) => {
           and we'd love it!
         </p>
         <p>
-          Made with ❤️ by <a href="https://www.rouanw.com">Rouan Wilsenach</a>
+          All original content is licensed under the
+          {` `}
+          <a
+            href="https://creativecommons.org/licenses/by-sa/4.0/"
+            rel="noopener noreferrer"
+          >Creative Commons Attribution-ShareAlike 4.0 International</a>
+          {` `}
+          license.
+        </p>
+        <p>
+          <a href="https://www.freepik.com/free-vector/women-talking-concept-illustration_24487863.htm#&position=30&from_view=detail#&position=30&from_view=detail">Image by storyset</a> on Freepik
         </p>
       </footer>
     </>

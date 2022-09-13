@@ -22,27 +22,32 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Home" socialTitle />
-      <section className="page-header">
-        <h1 className="display">Remote-friendly standup ideas for your team</h1>
-        <div>
-          <p>Tired of having the same old Zoom call every day?</p>
-          <p>Use these fun and creative standup formats to mix things up and learn more about your team and work.</p>
-        </div>
-        <div className="buttons">
-          <button
-            className="button -primary"
-            onClick={() => {
-              let randomUrl = [standups[Math.floor(Math.random() * standups.length)].slug]
-              window.location.assign(randomUrl)
-            }}
-          >Random standup idea!</button>
-          <a
-            className="button -secondary"
-            href="https://forms.gle/QtQXGZ3E3UCaMnoG9"
-            rel="external"
-          >I have an idea...</a>
-        </div>
-      </section>
+      <div className="hero">
+        <section className="page-header">
+          <h1 className="display">Remote-friendly standup ideas for your team</h1>
+          <div>
+            <p>Tired of having the same old Zoom call every day?</p>
+            <p>Use these fun and creative standup formats to mix things up and learn more about your team and work.</p>
+          </div>
+          <div className="buttons">
+            <button
+              className="button -primary"
+              onClick={() => {
+                let randomUrl = [standups[Math.floor(Math.random() * standups.length)].slug]
+                window.location.assign(randomUrl)
+              }}
+            >Random standup idea!</button>
+            <a
+              className="button -secondary"
+              href="https://forms.gle/QtQXGZ3E3UCaMnoG9"
+              rel="external"
+            >I have an idea...</a>
+          </div>
+        </section>
+        <section>
+          <img className="hero-image" src="/women-talking-concept-illustration_114360-8881.jpg" alt="Illustration of people talking"/>
+        </section>
+      </div>
 
       <nav className="standup-navigation">
         <p id="filter-label">Filter:</p>
