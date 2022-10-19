@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title, socialTitle }) {
+function SEO({ description, lang, meta, title, socialTitle, slug }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,6 +19,8 @@ function SEO({ description, lang, meta, title, socialTitle }) {
             title
             description
             author
+            twitterUsername
+            siteUrl
           }
         }
       }
@@ -42,6 +44,14 @@ function SEO({ description, lang, meta, title, socialTitle }) {
         {
           property: `og:title`,
           content: socialTitle ? site.siteMetadata.title : title,
+        },
+        {
+          property: `og:url`,
+          content: slug ? `${site.siteMetadata.siteUrl}/${slug}` : site.siteMetadata.siteUrl,
+        },
+        {
+          property: `twitter:site`,
+          content: site.siteMetadata.twitterUsername,
         },
         {
           property: `og:description`,
@@ -74,6 +84,10 @@ function SEO({ description, lang, meta, title, socialTitle }) {
         {
           name: `og:image`,
           content: `https://funstandups.com/social_3.png`,
+        },
+        {
+          name: `twitter:image:alt`,
+          content: `Fun Standups - remote-friendly standup ideas`
         }
       ].concat(meta)}
     />

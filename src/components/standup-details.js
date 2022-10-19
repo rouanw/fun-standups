@@ -9,7 +9,7 @@ const StandupDetails = ({ pageContext }) => {
   const { standup } = pageContext
   return (
     <Layout>
-      <Seo title={`${standup.title}`} description={`${standup.summary}`} />
+      <Seo title={standup.title} description={standup.summary} slug={standup.slug} />
       <a href="/" className="back-link"><span aria-hidden="true">← </span>All ideas</a>
       <div className="standup-details">
         <h1 className="standup-details--title">{standup.title}</h1>
