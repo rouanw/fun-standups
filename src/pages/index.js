@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from "react"
 import _ from 'lodash'
 
 import Layout from "../components/layout"
@@ -17,6 +17,16 @@ const IndexPage = () => {
   const [visiblestandups, setVisiblestandups] = useState(standups)
   const [currentTag, setCurrentTag] = useState()
   const [isHidingStandups, setHidingStandups] = useState(false)
+  const [installStatus, setInstallStatus] = useState(undefined)
+  useEffect(() => {
+    const { install, status } = new Proxy(new URLSearchParams(window.location.search), {
+      get: (searchParams, prop) => searchParams.get(prop),
+    })
+    setInstallStatus({
+      install,
+      status,
+    })
+  }, []);
   const transitionTiming = 400
 
   return (
@@ -43,6 +53,9 @@ const IndexPage = () => {
               rel="external"
             >I have an idea...</a>
           </div>
+          {installStatus?.install === 'slack' && installStatus?.status === 'success' ? <section>
+            <div className="install -success">Yay! You've successfully installed the Fun Standups Slack App! 💜</div>
+          </section> : null}
         </section>
         <section>
           <img className="hero-image" src="/women-talking-concept-illustration_114360-8881.jpg" alt="Illustration of people talking"/>
