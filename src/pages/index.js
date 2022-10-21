@@ -47,11 +47,7 @@ const IndexPage = () => {
                 window.location.assign(randomUrl)
               }}
             >Random standup idea!</button>
-            <a
-              className="button -secondary"
-              href="https://forms.gle/QtQXGZ3E3UCaMnoG9"
-              rel="external"
-            >I have an idea...</a>
+            <a href="https://slack.com/oauth/v2/authorize?client_id=1456654958694.4200110150032&scope=chat:write,commands&user_scope="><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
           </div>
           {installStatus?.install === 'slack' && installStatus?.status === 'success' ? <section>
             <div className="install -success">Yay! You've successfully installed the Fun Standups Slack App! 💜</div>
