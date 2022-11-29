@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
 import _ from 'lodash'
 
 import Layout from "../components/layout"
@@ -6,12 +6,11 @@ import Seo from "../components/seo"
 import "../components/fun-standups.sass"
 import Standup from "../components/standup"
 import standups from "../standup-data.json"
-import getTagColors from "../get-tag-colors"
+import Unicorns from "../components/unicorns"
 
 const filterStandupsByTag = (standups, tag) => standups.filter((standup) => standup.tags && standup.tags.includes(tag))
 
 const availableTags = Array.from(new Set(_.flatten(standups.map((standup) => standup.tags)).filter(Boolean)));
-const tagColors = getTagColors();
 
 const IndexPage = () => {
   const [visiblestandups, setVisiblestandups] = useState(standups)
@@ -32,88 +31,91 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Home" socialTitle />
-      <div className="hero">
-        <section className="page-header">
-          <h1 className="display">Remote-friendly standup ideas for your team</h1>
-          <div>
-            <p>Tired of having the same old Zoom call every day?</p>
-            <p>Use these fun and creative standup formats to mix things up and learn more about your team and work.</p>
-          </div>
-          <div className="buttons">
-            <button
-              className="button -primary"
-              onClick={() => {
-                let randomUrl = [standups[Math.floor(Math.random() * standups.length)].slug]
-                window.location.assign(randomUrl)
-              }}
-            >Random standup idea!</button>
-            <a href="https://slack.com/oauth/v2/authorize?client_id=1456654958694.4200110150032&scope=chat:write,commands&user_scope="><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
-          </div>
-          {installStatus?.install === 'slack' && installStatus?.status === 'success' ? <section>
-            <div className="install -success">Yay! You've successfully installed the Fun Standups Slack App! 💜</div>
-          </section> : null}
-        </section>
-        <section>
-          <img className="hero-image" src="/women-talking-concept-illustration_114360-8881.jpg" alt="Illustration of people talking"/>
-        </section>
-      </div>
 
-      <nav className="standup-navigation">
-        <p id="filter-label">Filter:</p>
-        <div
-          className="standup-filters"
-          role="radiogroup"
-          aria-labelledby="filter-label"
-          aria-controls="standups">
-          <button
-            className="button -tag"
-            onClick={() => {
-              setHidingStandups(true)
-              setTimeout(() => {
-                setVisiblestandups(standups)
-                setHidingStandups(false)
-              }, transitionTiming)
-              setCurrentTag()
-            }}
-            role="radio"
-            aria-checked={currentTag ? 'false' : 'true'}
-          >Show all</button>
-          {
-            availableTags.map((tag, index) => (
-              <button
-                className="button -tag"
-                onClick={() => {
-                  setHidingStandups(true)
-                  setTimeout(() => {
-                    setVisiblestandups(filterStandupsByTag(standups, tag))
-                  }, transitionTiming)
-                  setCurrentTag(tag)
-                }}
-                role="radio"
-                aria-checked={tag === currentTag ? 'true' : 'false'}
-                style={{
-                  color: tag === currentTag ? 'white' : tagColors[tag]
-                }}
-                key={tag}
-              >{tag}</button>
-            ))
-          }
+      {installStatus?.install === 'slack' && installStatus?.status === 'success' ? <div className="banner" aria-live="polite">
+        <span>✨ Yay! You've successfully installed the Fun Standups Slack App! ✨</span>
+      </div> : null}
+    
+      <section className="hero">
+        <h1 className="display">Remote-friendly standup ideas for your team</h1>
+
+        <div className="hero--illustration">
+          <Unicorns />
         </div>
-      </nav>
+        
+        <div className="hero--preamble">
+          <h2>Tired of having the same old Zoom call every day?</h2>
+          <p>Use these fun and creative standup formats to mix things up and learn more about your team and work.</p>
+        </div>
 
-      <p id="standup-count" aria-live="assertive">{`Showing ${visiblestandups.length} stand-ups.`}</p>
+        <div className="buttons">
+          <button
+            id="get-random"
+            className="button -primary"
+            onClick={() => {
+              let randomUrl = [standups[Math.floor(Math.random() * standups.length)].slug]
+              window.location.assign(randomUrl)
+            }}
+          >Random standup idea!</button>
+          {installStatus?.install === 'slack' && installStatus?.status === 'success' ? null : <a href="https://slack.com/oauth/v2/authorize?client_id=1456654958694.4200110150032&scope=chat:write,commands&user_scope=" className="button -secondary"><img src="/slack-logo.svg" class="icon" alt="" role="presentation" /> Add to Slack</a>}
+        </div>
+      </section>
 
-      <ul
-        id="standups"
-        className="standups"
-        style={{
-          transition: `opacity ${transitionTiming}ms ease-in-out`,
-          opacity: `${isHidingStandups ? 0 : 1}`
-        }}
-        onTransitionEnd={() => setHidingStandups(false)}
-      >
-        {visiblestandups.map((standup) => <Standup key={standup.title} standup={standup} tagColors={tagColors}></Standup>)}
-      </ul>
+
+      <section className="standup-section">
+        <nav className="filter-navigation">
+          <div
+            className="buttons"
+            role="radiogroup"
+            aria-label="Filter"
+            aria-controls="cards">
+            <button
+              className="button -tag"
+              onClick={() => {
+                setHidingStandups(true)
+                setTimeout(() => {
+                  setVisiblestandups(standups)
+                  setHidingStandups(false)
+                }, transitionTiming)
+                setCurrentTag()
+              }}
+              role="radio"
+              aria-checked={currentTag ? 'false' : 'true'}
+            >Show all</button>
+            {
+              availableTags.map((tag, index) => (
+                <button
+                  className="button -tag"
+                  onClick={() => {
+                    setHidingStandups(true)
+                    setTimeout(() => {
+                      setVisiblestandups(filterStandupsByTag(standups, tag))
+                    }, transitionTiming)
+                    setCurrentTag(tag)
+                  }}
+                  role="radio"
+                  aria-checked={tag === currentTag ? 'true' : 'false'}
+                  key={tag}
+                >{tag}</button>
+              ))
+            }
+          </div>
+        </nav>
+
+        <p id="standup--count" aria-live="assertive">{`Showing ${visiblestandups.length} stand-ups.`}</p>
+
+        <ul
+          id="cards"
+          className="cards"
+          style={{
+            transition: `opacity ${transitionTiming}ms ease-in-out`,
+            opacity: `${isHidingStandups ? 0 : 1}`
+          }}
+          onTransitionEnd={() => setHidingStandups(false)}
+        >
+          {visiblestandups.map((standup) => <Standup key={standup.title} standup={standup}></Standup>)}
+        </ul>
+      </section>
     </Layout>
   )
 }
