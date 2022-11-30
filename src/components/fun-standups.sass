@@ -1,127 +1,164 @@
+/// FUN STANDUPS STYLESHEET
+/// V2.0 LET THERE BE UNICORNS 🦄
+/// created by jakob.works
+/// november 2022
+/// - - - - - - - - -
+/// version highlights
+///  - new header font
+///  - increased line-height
+///  - simplified sass
+///  - colours transitioned to css custom properties
+///  - dark mode
+///  - unicorns!
 
-// ______,,,^._.^,,,______
 
+// —————————————————————————————————————————————————
 // functions and variables
-
-// ¯¯¯¯¯¯¯''' U '''¯¯¯¯¯¯¯
+// —————————————————————————————————————————————————
 
 // functions
 @function m($multiplier: 1)
   @return $multiplier * 1rem
 
-
 // swatches
 $color-waxen-white: #ffffff
-$color-ashen-apparition: #f5f5f5
-$color-callous-charcoal: #2b3547
+$color-ashen-apparition: #e6e6e6
+$color-stuffy-silver: #c0c0c0
+$color-slippery-slate: #545456
 $color-gauche-gray: #43526f
+$color-callous-charcoal: #2b3547
+$color-blasphemous-black: #222224
 $color-pompous-purple: #800080
-$color-risque-red: #b3002e
-
-
-// ui colours
-$color-foreground: $color-callous-charcoal
-$color-background: $color-waxen-white
-$color-background-accent: $color-ashen-apparition
-
-$color-text: $color-callous-charcoal
-$color-text-light: $color-gauche-gray
-
-$color-link: $color-pompous-purple
-$color-focus: $color-callous-charcoal
-
-$color-alert: $color-risque-red
-
-$fun-gradient: linear-gradient(-20deg, $color-foreground, $color-pompous-purple)
-
+$color-pathetic-pink: #e55591
 
 // font sizes
-$font-size-xl: 3.5rem
-$font-size-l: 2.4rem
-$font-size-m: 1.8rem
-$font-size-body: 1.125rem
-$font-size-small: 1rem
+$font-size-xl: 5.5rem     // 88px
+$font-size-l: 2.4rem      // 38.4px
+$font-size-m: 1.5rem      // 24px
+$font-size-body: 1.125rem // 18px
+$font-size-small: 1rem    // 16px
 
 $font-family-body: Arial, sans-serif
-$font-family-header: 'Montserrat', 'Arial Black', Arial, sans-serif
-
+$font-family-header: 'Calistoga', 'Arial Black', Arial, sans-serif
 
 // font weights
 $font-weight-body: 400
-$font-weight-header: 900
-
+$font-weight-strong: 600
+$font-weight-header: 400
 
 // line height
-$line-height-body: 1.4
-$line-height-header: 1.1
+$line-height-body: 1.5
+$line-height-header: 1.2
 
+// lay-out
+$max-width-content: m(75)
+$max-width-text: m(36)
+
+$breakpoint: m(32)
+$breakpoint-two-cards: m(42)
+$breakpoint-three-cards: m(60)
 
 // padding / margin
-$padding-s: m(0.5)
-$padding-m: m(1)
-$padding-l: m(2)
-$padding-xl: m(4)
+$padding-xs: m(0.5) // 8px
+$padding-s: m(1)    // 16px
+$padding-m: m(1.5)  // 24px
+$padding-l: m(2)    // 32px
+$padding-xl: m(2.5) // 40px
+$padding-xxl: m(5)  // 80px
 
 $padding-text: m(0.75)
-
-$padding-vertical-flow: 10vh
-
-$focus-width: m(0.25)
-
-
-// transitions
-$transition-timing: 260ms
-$transition-easing: ease-in-out
-
-$transition-defaults: $transition-timing $transition-easing
-
 
 // misc
 $border-radius: 0.725rem
 
 
-
-// __,,,^._.^,,,__
-
+// —————————————————————————————————————————————————
 // font face
+// —————————————————————————————————————————————————
 
-// ¯¯¯''' U '''¯¯¯
-
-// montserrat
+// calistoga
 @font-face
   font:
-    family: 'Montserrat'
+    family: 'Calistoga'
     style: normal
-    weight: 900
+    weight: 400
     display: swap
-  src: url(../fonts/montserrat.woff2) format('woff2')
+  src: url(../fonts/calistoga.woff2) format('woff2')
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
 
 
+// —————————————————————————————————————————————————
+// color scheme
+// —————————————————————————————————————————————————
 
-// _________,,,^._.^,,,_________
+:root
+  --color-bg: #{$color-waxen-white}
+  --color-bg-accent: rgba(0, 0, 0, 0.05)
+  --color-fg: #{$color-callous-charcoal}
+  --color-fg-dimmed: #{$color-gauche-gray}
+  --color-inverted: #{$color-waxen-white}
+  --color-border: #{$color-stuffy-silver}
+  --color-hover-shadow: #{$color-callous-charcoal}
+  --color-brand: #{$color-pompous-purple}
+  --color-brand-accent: #{mix($color-pompous-purple, black)}
+  --color-brand-radial-1: #{rgba($color-pompous-purple, 0.2)}
+  --color-brand-radial-2: #{rgba($color-pompous-purple, 0)}
+  --gradient: linear-gradient(to bottom right, var(--color-brand), var(--color-brand-accent))
 
+  @media (prefers-color-scheme: dark)
+    --color-bg: #{$color-blasphemous-black}
+    --color-fg: #{$color-ashen-apparition}
+    --color-fg-dimmed: #{$color-stuffy-silver}
+    --color-border: #{$color-slippery-slate}
+    --color-hover-shadow: #{$color-pathetic-pink}
+    --color-brand: #{$color-pathetic-pink}
+    --color-brand-radial-1: #{rgba($color-pathetic-pink, 0.3)}
+    --color-brand-radial-2: #{rgba($color-pathetic-pink, 0)}
+    --color-brand-accent: #{mix($color-pathetic-pink, black)}
+
+
+// —————————————————————————————————————————————————
+// a11y enhancements
+// —————————————————————————————————————————————————
+
+@media (prefers-reduced-motion: reduce)
+  *,
+  *::before,
+  *::after
+    animation: none !important
+    transition: none !important
+
+%focus
+  outline: 2px solid var(--color-fg)
+  outline-offset: -1px
+
+*:focus
+  @extend %focus
+
+.visually-hidden
+  position: absolute !important
+  width: 1px !important
+  height: 1px !important
+  overflow: hidden !important
+  clip: rect(1px, 1px, 1px 1px)
+
+
+// —————————————————————————————————————————————————
 // typography and basic lay-out
-
-// ¯¯¯¯¯¯¯¯¯¯''' U '''¯¯¯¯¯¯¯¯¯¯
+// —————————————————————————————————————————————————
 
 body
-  padding: $padding-m
+  padding: $padding-m $padding-m 0
   font:
     family: $font-family-body
     size: $font-size-body
     weight: $font-weight-body
   line-height: $line-height-body
-  color: $color-text
-  background-color: $color-background
+  color: var(--color-fg)
+  background:
+    color: var(--color-bg)
+    image: radial-gradient(circle at 80vw 20vh, var(--color-brand-radial-1) 0, var(--color-brand-radial-2) 40vw), radial-gradient(circle at left bottom, var(--color-brand-radial-1) 0, var(--color-brand-radial-2) 60vw)
 
-%gradient-text
-  @supports (background-clip: text)
-    -webkit-text-fill-color: transparent
-    background:
-      image: $fun-gradient
-      clip: text
-      size: cover
 
 h1,
 h2,
@@ -135,240 +172,296 @@ h4
 h1
   font-size: $font-size-l
 
-  @media (min-width: #{m(60)})
+  @media (min-width: #{$breakpoint-three-cards})
     font-size: $font-size-xl
-
-h1.display
-  @extend %gradient-text
-
-  text-transform: uppercase
 
 h2
   font-size: $font-size-m
 
-p + p,
-li + li
-  margin-top: $padding-text
-
-ul
-  margin:
-    top: #{$padding-text * 2}
-    bottom: #{$padding-text * 2}
-
 header,
 main,
 footer
-  max-width: m(70)
+  max-width: $max-width-content
   margin:
     right: auto
     left: auto
 
-header
-  margin-top: #{$padding-vertical-flow * 0.5}
 
-main,
-footer
-  margin-top: $padding-vertical-flow
+// —————————————————————————————————————————————————
+// main hover effect
+// —————————————————————————————————————————————————
 
+%hover
+  box-shadow: 0 0 var(--color-hover-shadow)
+  transform: translate3d(0, 0, 0)
+  transition: box-shadow 250ms ease, transform 250ms ease
 
-
-// __,,,^._.^,,,__
-
-// visually hidden
-
-// ¯¯¯''' U '''¯¯¯
-
-.visually-hidden
-  position: absolute !important
-  width: 1px !important
-  height: 1px !important
-  overflow: hidden !important
-  clip: rect(1px, 1px, 1px 1px)
+  &:hover
+    @extend %focus
+    box-shadow: m(0.5) m(0.5) var(--color-hover-shadow)
+    transform: translate3d(#{m(-0.5)}, #{m(-0.5)}, 0)
 
 
-
-// ___________,,,^._.^,,,___________
-
-// links, buttons, card hover/focus
-
-// ¯¯¯¯¯¯¯¯¯¯¯¯''' U '''¯¯¯¯¯¯¯¯¯¯¯¯
+// —————————————————————————————————————————————————
+// links
+// —————————————————————————————————————————————————
 
 a
-  color: $color-link
+  color: inherit
+  font-weight: $font-weight-strong
 
-a,
-.button,
-.standup
-  position: relative
+  &:hover
+    text-decoration: none
 
-.standup--title a
-  position: static
-
-a.-tag,
-.standup--link,
-.button
-  &::after
-    content: ''
-    position: absolute
-    top: m(-0.75)
-    right: m(-0.75)
-    bottom: m(-0.75)
-    left: m(-0.75)
-    border: $focus-width solid $color-focus
-    border-radius: #{$border-radius + 0.5}
-    opacity: 0
-    transform: scale3d(0.9, 0.8, 1)
-    transition: transform $transition-defaults, opacity $transition-defaults
-
-  &:focus
-    outline: 0
-
-  &:hover::after,
-  &:focus::after
-    transform: scale3d(1, 1, 1)
-    opacity: 1
-
-  &:active
-    transform: scale3d(0.85, 0.85, 1)
+// —————————————————————————————————————————————————
+// buttons
+// —————————————————————————————————————————————————
 
 .button
-  display: inline-block
+  display: inline-flex
+  align-items: center
   cursor: pointer
   padding: $padding-m $padding-l
-  border-radius: $border-radius
+  border: 1px solid var(--color-border)
+  border-radius: #{$border-radius * 4}
+  font-weight: $font-weight-strong
   text:
     align: center
     decoration: none
 
-.button.-primary,
-.button.-secondary
-  font-weight: bold
+  &.-small,
+  &.-tag
+    padding: $padding-xs $padding-s
 
-  @media (max-width: #{m(32)})
-    width: 100%
+  &.-primary,
+  &.-tag[aria-checked='true']
+    border-color: transparent
+    color: var(--color-inverted)
+    background-image: var(--gradient)
 
-.button.-primary
-  background:
-    color: $color-link
-    image: $fun-gradient
-  color: $color-background
+  &.-secondary,
+  &.-tag[aria-checked='false']
+    background-color: var(--color-bg)
+    color: var(--color-fg)
+    border-color: var(--color-border)
 
-.button.-secondary
-  @extend %gradient-text
+  &.-tag[aria-checked='false']
+    font-weight: $font-weight-body
 
-  background-color: $color-background
-  color: $color-link
-  box-shadow: 0 0 0 2px $color-link inset
+  &:hover
+    @extend %hover
 
-.button.-tag,
-.back-link
-  display: inline-block
-  padding: 0 m(1.25)
-  border-radius: m(1.25)
-  background-color: $color-background-accent
-  color: $color-text
-  line-height: m(2.5)
-  text-decoration: none
+  .icon
+    width: m(1.4)
+    height: m(1.4)
+    margin-right: $padding-xs
 
-  &[aria-checked='true']
-    background:
-      color: $color-foreground
-      image: $fun-gradient
-    color: $color-background
 
-  &::after
-    border-radius: m(2.15)
+// —————————————————————————————————————————————————
+// button container
+// —————————————————————————————————————————————————
 
 .buttons
   display: flex
   flex-flow: column nowrap
   align-items: center
+  width: 100%
 
-  & > *
-    margin: $padding-s m(0.65)
+  .button
+    width: 100%
 
-  @media (min-width: #{m(32)})
+  .button + .button
+    margin-top: $padding-s
+
+  @media (min-width: #{$breakpoint})
     flex-flow: row wrap
+    width: auto
 
-    & > *:first-child
-      margin-left: 0
+    .button
+      width: fit-content
+
+    .button + .button
+      margin:
+        top: 0
+        left: $padding-s
 
 
-.install
-  margin: 10px 0
-  padding: 10px
-  border-radius: 3px 3px 3px 3px
+// —————————————————————————————————————————————————
+// cards
+// —————————————————————————————————————————————————
 
-.install.-success
-  color: #270
-  background-color: #DFF2BF
+.card
+  padding: $padding-xl
+  position: relative
+  border: 1px solid var(--color-border)
+  border-radius: $border-radius
+  background-color: var(--color-bg)
+  list-style: none
 
-// __,,,^._.^,,,__
+  & > * + *
+    margin-top: $padding-m
 
+  &:focus-within
+    @extend %focus
+
+  &:hover
+    @extend %hover
+
+.card--link
+  text-decoration: none
+
+  &:focus
+    outline: 0
+
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+
+// —————————————————————————————————————————————————
+// card container
+// —————————————————————————————————————————————————
+
+.cards
+  display: grid
+  grid:
+    template:
+      columns: 1fr
+      rows: auto
+    gap: $padding-m
+  margin-left: 0
+
+  @media (min-width: #{$breakpoint-two-cards})
+    grid-template-columns: 1fr 1fr
+
+  @media (min-width: #{$breakpoint-three-cards})
+    grid-template-columns: 1fr 1fr 1fr
+
+
+// —————————————————————————————————————————————————
+// tags
+// —————————————————————————————————————————————————
+
+.tags
+  margin-left: 0
+  display: flex
+  flex-direction: row
+
+.tag
+  margin: 0
+  list-style: none
+  color: var(--color-brand)
+  font-size: $font-size-small
+
+  & + .tag::before
+    content: '•'
+    display: inline-block
+    margin:
+      right: $padding-xs
+      left: $padding-xs
+    color: var(--color-fg)
+
+
+// —————————————————————————————————————————————————
 // masthead
-
-// ¯¯¯''' U '''¯¯¯
+// —————————————————————————————————————————————————
 
 .masthead a
   display: block
-  max-width: m(12)
 
-  @media (min-width: #{m(60)})
-    max-width: m(16)
+  @media (min-width: #{$max-width-content})
+    margin-left: m(-1.5)
 
-
-
-// __,,,^._.^,,,__
-
-// footer
-
-// ¯¯¯''' U '''¯¯¯
-
-footer
-  margin-top: $padding-l
-  padding: $padding-l
-  border-radius: $border-radius
-  color: $color-text-light
-  background-color: $color-background-accent
-  font-size: $font-size-small
+  body:has(.banner) &
+    margin-top: $padding-xl
 
 
-
-// __,,,^._.^,,,__
-
-// page header
-// standup details
-
-// ¯¯¯''' U '''¯¯¯
+// —————————————————————————————————————————————————
+// hero
+// —————————————————————————————————————————————————
 
 .hero
   display: flex
-  flex-direction: column-reverse
-  @media (min-width: #{m(50)})
+  flex-direction: column
+  margin-top: $padding-xl
+  align-items: center
+  text-align: center
+
+  & > * + *
+    margin-top: $padding-l
+
+.hero--illustration
+  width: 100%
+  max-width: m(28)
+  aspect-ratio: 1 / 1
+  margin-top: m(-4)
+
+.hero--preamble
+  max-width: $max-width-text
+
+  p
+    margin-top: $padding-s
+
+
+// —————————————————————————————————————————————————
+// standup section
+// —————————————————————————————————————————————————
+
+.standup-section
+  margin-top: $padding-xxl
+  
+  & > * + *
+    margin-top: $padding-xl
+
+#standup--count
+  @extend .visually-hidden
+
+
+// —————————————————————————————————————————————————
+// footer
+// —————————————————————————————————————————————————
+
+footer
+  display: flex
+  flex-direction: column
+  margin-top: $padding-xxl
+  font-size: $font-size-small
+  color: var(--color-fg-dimmed)
+
+  @media (min-width: #{$max-width-content})
     flex-direction: row
 
-.hero-image
-  max-width: m(40)
-  max-height: m(40)
+.footer-content > * + *
+  margin-top: $padding-text
 
-.page-header,
+.footer-illustration
+  margin:
+    top: $padding-text
+    left: auto
+  line-height: 0
+
+  @media (min-width: #{$max-width-content})
+    //margin-top: 0
+
+
+// —————————————————————————————————————————————————
+// standup details
+// —————————————————————————————————————————————————
+
 .standup-details
-  max-width: m(40)
-  margin-bottom: $padding-vertical-flow
+  margin-top: $padding-xxl
 
-  @media (min-width: #{m(70)})
-    padding-left: $padding-l
-    border-left: 1px solid
-
-.page-header > * + *
-  margin-top: $padding-l
-
-.standup-details
-  margin-top: #{$padding-vertical-flow * 0.5}
+  & * + *
+    max-width: $max-width-text
+    margin-top: $padding-text
 
 .standup-details--summary
-  color: $color-text-light
   font-weight: bold
+  color: var(--color-brand)
 
 .standup-details--benefit
   position: relative
@@ -383,128 +476,88 @@ footer
     left: -2em
 
 .standup-details--contributor
-  margin:
-    top: $padding-l
-    bottom: $padding-l
-  color: $color-text-light
+  margin-top: $padding-l
+  color: var(--color-brand)
   font-size: $font-size-small
 
 
-
-// ____,,,^._.^,,,____
-
-// tag navigation
-
-// ¯¯¯¯¯''' U '''¯¯¯¯¯
-
-.standup-navigation
-  display: none
-
-  @media (min-width: #{m(32)})
-    display: flex
-    flex-flow: row wrap
-    align-items: center
-
-.standup-navigation p,
-.standup-navigation button
-  display: block
-  margin: $padding-s m(0.65)
-
-.standup-navigation p
-  margin-left: 0
-
-.standup-filters
-  display: flex
-  flex-flow: row wrap
-
-
-
-// ____,,,^._.^,,,____
-
-// standups
-
-// ¯¯¯¯¯''' U '''¯¯¯¯¯
-
-#standup-count
-  @extend .visually-hidden
-
-.standups
-  opacity: 1
-
-  &.-hidden
-    opacity: 0
-
-.standups
-  margin-left: 0
-  list-style: none
-
-  @media (min-width: #{m(42)})
-    display: grid
-    grid:
-      template-columns: 1fr 1fr
-      template-rows: auto
-      gap: $padding-xl
-
-  @media (min-width: #{m(60)})
-    grid-template-columns: 1fr 1fr 1fr
-
-.standup
-  display: flex
-  flex-direction: column
-  padding: $padding-l
-  border-radius: $border-radius
-  transform: translate3d(0, #{m(0)}, 0)
-  transition: transform $transition-defaults
-
-  &:hover,
-  &:focus
-    transform: translate3d(0, #{m(-1)}, 0)
-
-.standup a::after
-  box-shadow: 0 m(1) m(2.5) rgba(black, 0.16)
-
-.standup--title,
-.standup--summary
-  margin-bottom: $padding-m
-
-.standup--title a
-  color: $color-text
-  text-decoration: none
-
-.standup--summary
-  color: $color-text-light
-
-.standup--tags
-  margin: auto m(-0.5) 0 m(-0.5)
-  list-style: none
-  font-size: $font-size-small
-
-  .standup--tag
-    display: inline-block
-    margin:
-      right: $padding-s
-      left: $padding-s
-
-
-
-// ____,,,^._.^,,,____
-
+// —————————————————————————————————————————————————
 // related standups
-
-// ¯¯¯¯¯''' U '''¯¯¯¯¯
+// —————————————————————————————————————————————————
 
 .related-standups
-  padding: $padding-m
-  border-radius: $border-radius
-  background-color: $color-background-accent
+  padding-top: $padding-xxl
+  position: relative
 
 .related-standups--header
-  margin:
-    top: $padding-m
-    bottom: $padding-m
-    left: $padding-l
+  padding-bottom: $padding-m
   font:
     family: $font-family-body
     size: $font-size-body
-    weight: bold
+    weight: $font-weight-strong
   line-height: $line-height-body
+
+
+// —————————————————————————————————————————————————
+// slack install success banner
+// —————————————————————————————————————————————————
+
+.banner
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  margin:
+    //top: $padding-m
+    bottom: $padding-m
+  padding: $padding-s $padding-m
+  //border-radius: $border-radius
+  color: var(--color-inverted)
+  background-color: var(--color-fg)
+  font-weight: $font-weight-strong
+  text-align: center
+
+
+// —————————————————————————————————————————————————
+// animations
+// —————————————————————————————————————————————————
+
+@keyframes blink
+  0%, 4%, 100%
+    transform: scaleY(1)
+  2%
+    transform: scaleY(0.3)
+
+@keyframes speech
+  0%, 80%
+    transform: translate3d(0, #{ m(3) }, 0)
+    opacity: 0
+  85%, 90%
+    opacity: 1
+  100%
+    transform: translate3d(0, 0, 0)
+    opacity: 0
+
+.eye
+  transform-origin: 0% 38%
+  animation: blink 8000ms 0ms infinite
+
+  &.-two
+    animation: blink 5000ms 1000ms infinite
+
+  &.-three
+    transform-origin: 0% 33%
+    animation: blink 6000ms 3000ms infinite
+
+  &.-four
+    transform-origin: 0% 60%
+
+.speech-bubble
+  opacity: 0
+  animation: speech 9000ms -6000ms linear infinite
+
+  &.-two
+    animation-delay: -3000ms
+
+  &.-three
+    animation-delay: 0ms
