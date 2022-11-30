@@ -31,10 +31,6 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Home" socialTitle />
-
-      {installStatus?.install === 'slack' && installStatus?.status === 'success' ? <div className="banner" aria-live="polite">
-        <span>✨ Yay! You've successfully installed the Fun Standups Slack App! ✨</span>
-      </div> : null}
     
       <section className="hero">
         <h1 className="display">Remote-friendly standup ideas for your team</h1>
@@ -57,7 +53,7 @@ const IndexPage = () => {
               window.location.assign(randomUrl)
             }}
           >Random standup idea!</button>
-          {installStatus?.install === 'slack' && installStatus?.status === 'success' ? null : <a href="https://slack.com/oauth/v2/authorize?client_id=1456654958694.4200110150032&scope=chat:write,commands&user_scope=" className="button -secondary"><img src="/slack-logo.svg" class="icon" alt="" role="presentation" /> Add to Slack</a>}
+          {installStatus?.install === 'slack' && installStatus?.status === 'success' ? <div className="button-banner" aria-live="polite">☑️ Added to Slack</div> : <a href="https://slack.com/oauth/v2/authorize?client_id=1456654958694.4200110150032&scope=chat:write,commands&user_scope=" className="button -secondary"><img src="/slack-logo.svg" class="icon" alt="" role="presentation" /> Add to Slack</a>}
         </div>
       </section>
 
