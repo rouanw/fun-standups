@@ -69,7 +69,7 @@ $padding-xxl: m(5)  // 80px
 $padding-text: m(0.75)
 
 // misc
-$border-radius: 0.725rem
+$border-radius: m(1.5) // 24px
 
 
 // —————————————————————————————————————————————————
@@ -228,6 +228,8 @@ a
   text:
     align: center
     decoration: none
+  background-color: var(--color-bg)
+  color: var(--color-fg)
 
   &.-small,
   &.-tag
@@ -238,12 +240,6 @@ a
     border-color: transparent
     color: var(--color-inverted)
     background-image: var(--gradient)
-
-  &.-secondary,
-  &.-tag[aria-checked='false']
-    background-color: var(--color-bg)
-    color: var(--color-fg)
-    border-color: var(--color-border)
 
   &.-tag[aria-checked='false']
     font-weight: $font-weight-body
@@ -499,23 +495,17 @@ footer
 
 
 // —————————————————————————————————————————————————
-// slack install success banner
+// button banner
 // —————————————————————————————————————————————————
 
-.banner
-  position: fixed
-  top: 0
-  right: 0
-  left: 0
-  margin:
-    //top: $padding-m
-    bottom: $padding-m
-  padding: $padding-s $padding-m
-  //border-radius: $border-radius
-  color: var(--color-inverted)
-  background-color: var(--color-fg)
-  font-weight: $font-weight-strong
-  text-align: center
+.button-banner
+  @extend .button
+  color: var(--color-fg-dimmed)
+
+  &:hover
+    box-shadow: none
+    outline: 0
+    transform: none
 
 
 // —————————————————————————————————————————————————
