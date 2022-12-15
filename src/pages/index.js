@@ -53,7 +53,7 @@ const IndexPage = () => {
               window.location.assign(randomUrl)
             }}
           >Random standup idea!</button>
-          {installStatus?.install === 'slack' && installStatus?.status === 'success' ? <div className="button-banner" aria-live="polite">☑️ Added to Slack</div> : <a href="https://slack.com/oauth/v2/authorize?client_id=1456654958694.4200110150032&scope=chat:write,commands&user_scope=" className="button -secondary"><img src="/slack-logo.svg" class="icon" alt="" role="presentation" /> Add to Slack</a>}
+          {installStatus?.install === 'slack' && installStatus?.status === 'success' ? <div className="button-banner" aria-live="polite">☑️ Added to Slack</div> : <a href="https://slack.com/oauth/v2/authorize?client_id=1456654958694.4200110150032&scope=chat:write,commands&user_scope=" className="button -secondary"><img src="/slack-logo.svg" className="icon" alt="" role="presentation" /> Add to Slack</a>}
         </div>
       </section>
 
