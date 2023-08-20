@@ -4,7 +4,8 @@
     "title": "One person missing",
     "summary": "One person leaves standup and the rest of the team has to piece it all back together for them.",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "One person leaves your standup call (or goes to get themselves some coffee if you're in an office). The team then nominates one person to give the missing person an update when they return. Standup then happens as usual without the missing person. When they come back, the nominated person has to fill them in.",
     "benefits": [
@@ -22,7 +23,8 @@
     "title": "Where did everyone go?",
     "summary": "Almost everyone leaves standup and one person has to look at the board to tell everyone else what's happening",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "Everyone except one team member leaves standup. The person left behind has five minutes to take a look at the board and try to understand the status of everyone's work. While they do this, it's fun for the rest of the team to chat together on a separate video call, or around the corner if everyone's in the same office.",
     "benefits": [
@@ -40,7 +42,8 @@
     "title": "Update a team mate",
     "summary": "Get your whole team feeling involved by having each person update another",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "Each person gives their update to the another person in the team, using their name and talking to them directly. E.g. “Natalie, yesterday I was working on X and today I’ll be doing Y”. Each person who receives an update picks the next person to give their update to. The last person then updates the first person.  (If people keep picking the same group of team mates to give their update, use a little spreadsheet or script to pick folks randomly.)",
     "benefits": [
@@ -58,7 +61,8 @@
     "title": "Give someone else's update",
     "summary": "Each team member tries to give an update for the next person",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "Take turns with each person trying to update the team on behalf of the next person. (This works best when one person pick the order for the standup so people don't pick people who are easy.) No one will know everything, but try to see if you can remember what they're doing and what they'll be working on next.",
     "benefits": [
@@ -75,7 +79,8 @@
     "title": "One thing only",
     "summary": "Each team member only talks about the single most important thing they want to tell people",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "Take turns giving updates. Each team member only talks about the single most important thing they want to tell people.",
     "benefits": [
@@ -91,7 +96,8 @@
     "title": "Zoom way out",
     "summary": "Make sure your team gets the big picture by talking about your overall progress",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "What is your daily work contributing to? Hopefully your team has something (a digital board? a spreadsheet?) that shows how you're doing on your overall goals (maybe it's for a financial quarter, maybe it's for a particular project). Have standup while looking at this (someone share their screen if you're on a call) and ask one person to volunteer to give an update on each part of current/upcoming work.",
     "benefits": [
@@ -110,7 +116,8 @@
     "title": "Zoom way in",
     "summary": "Shuffle the cards on your team wall. Select one randomly and only talk about that one card as a team",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "Shuffle the cards on your team wall. Select one randomly and only talk about that one card as a team. For teams with digital walls, pop your open story numbers into a little Math.random function to pick a card at random.",
     "benefits": [
@@ -128,7 +135,8 @@
     "title": "Yesterday, today, blockers",
     "summary": "Each person lists what they did yesterday, what they'll do today and what is in their way",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "This is a classic standup format. Each person give an update on what they did yesterday (i.e. since the last standup), what they’ll be doing today and whether there are any blockers making it difficult for their work to progress.",
     "benefits": [
@@ -143,7 +151,8 @@
     "title": "Forget about the past",
     "summary": "This is the same format as “Yesterday, today, blockers”, except the team members do not update the rest of the team on what they’ve already completed",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "Every person lists what they'll be working on today and what might block the progress of that work. Nobody says anything about what happened yesterday.",
     "benefits": [
@@ -160,7 +169,8 @@
     "title": "What’s in the way?",
     "summary": "Only mention things that are stopping you from getting your work done ",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "Go around the team and only mention things that are stopping you from getting your work done or slowing you down. Pass if there’s nothing blocking you.",
     "benefits": [
@@ -176,7 +186,8 @@
     "title": "Walk the wall",
     "summary": "Talk through the work currently in progress, one item at a time",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "One person on the call shares their screen (or everyone gathers around a physical Agile wall). The person then asks for updates on each card in your 'In Progress' column. (Sometimes it will also be interesting to peek at your 'To Do' column, or see what new work is coming up soon.",
     "benefits": [
@@ -192,7 +203,8 @@
     "title": "Today I learned",
     "summary": "Take turns each sharing one thing you’ve learned since the last standup",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "This is a more reflective format, which focuses on sharing the things we learn during our day to day work.",
     "benefits": [
@@ -209,7 +221,8 @@
     "title": "How are you today?",
     "summary": "Take turns giving personal updates (no work!)",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "E.g. “Yesterday my wife and I watched the worst movie and today our daughter is having her first ever swimming lesson”.",
     "benefits": [
@@ -225,7 +238,8 @@
     "title": "Show me the numbers!",
     "summary": "Take a look at your team's key product metrics (graphs, totals etc.)",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "Instead of looking at user stories or an Agile wall, have your standup while someone shares a dashboard showing the numbers your team cares about most. This dashboard could contain a graph showing sales pipeline conversions, a table showing the top errors in the last hour, or the number of new user registrations in the day.",
     "benefits": [
@@ -241,7 +255,8 @@
     "title": "Draw your update",
     "summary": "Each team member draws what they're working on in JS Paint and the others guess what it is.",
     "contributor": {
-      "github": "RabeaGleissner"
+      "socialHandle": "RabeaGleissner",
+      "socialLink": "https://github.com/RabeaGleissner"
     },
     "description": "Team members share their screens in turn and use https://jspaint.app/ to draw something that they're working on. The others guess what it is. The rules are similar to those of a Pictionary game: the person who is presenting is not allowed to talk or write words. And the drawing needs to happen while everyone is watching.",
     "benefits": [
@@ -257,7 +272,8 @@
     "title": "Use 10 words or less",
     "summary": "Give your update but don't use more than 10 words.",
     "contributor": {
-      "github": "RabeaGleissner"
+      "socialHandle": "RabeaGleissner",
+      "socialLink": "https://github.com/RabeaGleissner"
     },
     "description": "Are your standups getting longer and longer? Try this one! Each team member can only use 10 words or less to give their update.",
     "benefits": [
@@ -274,7 +290,8 @@
     "title": "Last three commits",
     "summary": "Read your last three commit messages to the rest of the team.",
     "contributor": {
-      "github": "RabeaGleissner"
+      "socialHandle": "RabeaGleissner",
+      "socialLink": "https://github.com/RabeaGleissner"
     },
     "description": "If you are a team member who doesn't make commits, read the last three email titles or the names of the last three files that you saved. If those messages are not self-explanatory, talk briefly about the context.",
     "benefits": [
@@ -290,7 +307,8 @@
     "title": "Guess who gave the update",
     "summary": "Each team member submits their updates ahead of time. In standup, everyone else has to guess who gave which update.",
     "contributor": {
-      "github": "RabeaGleissner"
+      "socialHandle": "RabeaGleissner",
+      "socialLink": "https://github.com/RabeaGleissner"
     },
     "description": "This one takes a bit of preparation and needs a facilitator. The facilitator sets up a channel for everyone to submit messages anonymously (Google Forms work well). Each team member needs to submit 2 - 3 updates ahead of the standup. The facilitator then reads out each update and the others have to guess whose update it is.",
     "benefits": [
@@ -307,7 +325,8 @@
     "title": "Share one thing you learnt since last week",
     "summary": "Think of something you didn't know this time last week and that you know today.",
     "contributor": {
-      "github": "RabeaGleissner"
+      "socialHandle": "RabeaGleissner",
+      "socialLink": "https://github.com/RabeaGleissner"
     },
     "description": "We learn things all the time but sometimes we don't even notice it. Think about what you did last week and what you learnt since. Share it with everyone else. Chances are that they didn't know this either and you're teaching them something new!",
     "benefits": [
@@ -324,7 +343,8 @@
     "title": "The last song you listened to before standup",
     "summary": "Tell the others which song you listened to last. Maybe even play it for them briefly, if they don't know it!",
     "contributor": {
-      "github": "RabeaGleissner"
+      "socialHandle": "RabeaGleissner",
+      "socialLink": "https://github.com/RabeaGleissner"
     },
     "description": "It doesn't matter if you listen to music all the time while you're working or not at all... Let your team members know which song you listened to last, whether it was just now while you were coding, during your run this morning or last week at the opera! You could even make a team playlist.",
     "benefits": [
@@ -339,7 +359,8 @@
     "title": "Song of the Daily battle",
     "summary": "Organize a Song Battle where two members of the team provide candidates to the Song of the Daily and the rest of the team vote which one is the 'best'",
     "contributor": {
-      "github": "aguillentw"
+      "socialHandle": "aguillentw",
+      "socialLink": "https://github.com/aguillentw"
     },
     "description": "Two selected members of the team 'fight' proposing candidates for the 'Best' Song of the Daily. Once the songs or a portion of them have been played, the rest of the members vote for the best, where 'best' is completely a subjective matter: the funniest, the most trendy, the one with better quality... Actually, it doesn't really matter which of them wins. The contenders can be chosen randomly (e.g. the last two arriving to the daily) or preselected (e.g. on Fridays five couples of contenders are selected for the next week). The songs can be added to a list and as a side effect the Team Playlist is enriched with each contribution.",
     "benefits": [
@@ -354,7 +375,8 @@
     "title": "No standup!",
     "summary": "Try not having standup at all. Give your team some time to unwind. Do the right conversations still happen?",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "What if skipping standup actually helps you be more productive today? Not having standup can reveal whether your team is overly reliant on your daily meeting to communicate and co-ordinate. If not having standup means work doesn't get done, you likely have some communication issues to deal with.\n\nCancelling standup is also a fantastic way to give your team enough time to take a little break. You can even encourage specific activities, like taking a walk, reading a book, or all doing the same 15-minute yoga video.",
     "benefits": [
@@ -370,7 +392,8 @@
     "title": "Where does your update go?",
     "summary": "Place your updates on sticky notes and group them on a real or virtual whiteboard",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "Using a physical or digital whiteboard, get each team member to write their updates on sticky notes. One update per sticky note, and limit it to one or two notes each. You can either ask each person to place their sticky notes on the board one by one, and place it close to related ones; or you can all pop your notes on in one go and then group them after. Pay attention to whose notes go where (different colour notes may help with this) and talk about it as a team.",
     "benefits": [
@@ -389,7 +412,8 @@
     "title": "Shakespearean Standup",
     "summary": "Write a poem about the things you did yesterday, you are going to do today and your blockers.",
     "contributor": {
-      "github": "leonhuzen"
+      "socialHandle": "leonhuzen",
+      "socialLink": "https://github.com/leonhuzen"
     },
     "description": "You're allowed to use simple poems like the classic \"roses are red\", \"Mary had a little lamb\", or go ludicrous like a true William Shakespeare and baffle your teammates with your extensive vocabulary.",
     "benefits": [
@@ -407,7 +431,8 @@
     "title": "Hopes and fears",
     "summary": "Share what your hope for today is. Share your biggest concern.",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "Each person shares one thing they're hopeful for. This could be something they hope will happen, something they hope to gain, or something they want to learn. Each person also shares one thing they're concerned about. This standup is especially useful when your team or organisation (or the world!) is going through big changes. Use the opportunity to hear how everyone is feeling about what's going on. Are they apprehensive about anything? Is there something they hope to learn or gain from what's about to happen?",
     "benefits": [
@@ -426,7 +451,8 @@
     "title": "My high and my low",
     "summary": "What was the highest and lowest point in the past day for you?",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "Each person shares what the high and low was for them personally since you last met as a team. What was the thing that made them happiest or feel most excited? What was the thing that made them feel sad or frustrated?",
     "benefits": [
@@ -444,7 +470,8 @@
     "title": "Today I'm thankful",
     "summary": "Share one thing you're thankful for today",
     "contributor": {
-      "github": "rouanw"
+      "socialHandle": "rouanw",
+      "socialLink": "https://github.com/rouanw"
     },
     "description": "The world, and even work, can be quite negative sometimes. Take a moment to focus on the positive. Is there something or someone in your life or at work that you are thankful for? This is a great opportunity to recognise our team members for what they do for us.",
     "benefits": [
@@ -453,6 +480,26 @@
       "You'll learn a bit more about what's important to your teammates"
     ],
     "tags": [
+      "Reflective"
+    ]
+  },
+  {
+    "slug": "role-play",
+    "title": "Role Play - give your update in a team mate's voice",
+    "summary": "Each team mate get to wear the shoes of the other team mate and give their update like how the team mate would do it",
+    "contributor": {
+      "socialHandle": "moha_zakari",
+      "socialLink": "https://twitter.com/moha_zakari"
+    },
+    "description": "The team rolls a dice to determine who starts. This person (starter) would do their standup by making an impression of team member A, then after ask member A to do their update in the starter's voice. Member A points the next team member and the cycle goes on. This is fun and encourages camaraderie between team mates.",
+    "benefits": [
+      "Improves camaraderie between team mates",
+      "Gives opportunity for team members to try to see things from the perspective of other team mates",
+      "Great way to practice and understand the different communication styles within the team"
+    ],
+    "tags": [
+      "Team bonding",
+      "New view",
       "Reflective"
     ]
   }
