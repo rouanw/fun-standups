@@ -502,5 +502,23 @@
       "New view",
       "Reflective"
     ]
+  },
+  {
+    "slug": "one-extra-thing",
+    "title": "One extra thing",
+    "summary": "In a twist on the classic standup, you finish by sharing a personal, theme-based thing with the team.",
+    "contributor": {
+      "socialHandle": "aepicos",
+      "socialLink": "https://github.com/aepicos"
+    },
+    "description": "This is a twist to the classic standup to help teams learn more about each other and grow closer. Whoever runs the standup selects a theme (for example: what place would you love to visit; what is your favourite cuisine; which animal do you think you most resemble). Each person goes through the classic standup question (did, doing, blockers) and ends with answering the question.",
+    "benefits": [
+      "Allows teams to learn more about each member.",
+      "Builds empathy."
+    ],
+    "tags": [
+      "Team bonding",
+      "Communication"
+    ]
   }
 ]
