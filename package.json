@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "rouanw",
   "dependencies": {
-    "gatsby": "^5.10.0",
+    "gatsby": "^5.13.6",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-google-gtag": "^5.2.0",
     "gatsby-plugin-lodash": "^6.2.0",
