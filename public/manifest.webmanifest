@@ -1,0 +1,15 @@
+{
+  "name": "Fun Standups",
+  "short_name": "Fun Standups",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#800080",
+  "icons": [
+    {
+      "src": "/funicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
