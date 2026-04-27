@@ -32,7 +32,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-lodash`,
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        serialize: ({ path }) => ({
+          url: path.endsWith('/') ? path : `${path}/`,
+        }),
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
