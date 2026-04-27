@@ -25,7 +25,7 @@
     "preview": "astro preview",
     "format": "prettier --write src/**/*.{js,jsx,astro}",
     "test": "echo \"No tests yet\"",
-    "deploy": "echo \"funstandups.com\" > public/CNAME && astro build && gh-pages -d dist"
+    "deploy": "echo \"funstandups.com\" > public/CNAME && astro build && gh-pages -d dist --dotfiles"
   },
   "repository": {
     "type": "git",
