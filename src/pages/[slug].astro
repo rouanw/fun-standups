@@ -1,0 +1,49 @@
+---
+import Layout from '../components/Layout.astro';
+import RelatedStandups from '../components/RelatedStandups.astro';
+import standups from '../data/standup-data.json';
+
+export function getStaticPaths() {
+  return standups.map((standup) => ({
+    params: { slug: standup.slug },
+    props: { standup },
+  }));
+}
+
+const { standup } = Astro.props;
+---
+<Layout>
+  <Fragment slot="head">
+    <title>{standup.title} | Fun Standups!</title>
+    <meta name="description" content={standup.summary} />
+    <meta property="og:title" content={standup.title} />
+    <meta property="og:url" content={`https://funstandups.com/${standup.slug}/`} />
+    <meta property="og:description" content={standup.summary} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://funstandups.com/social_3.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="https://funstandups.com/social_twitter_1.png" />
+    <meta name="twitter:image:alt" content="Fun Standups - remote-friendly standup ideas" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/funicon.png" />
+  </Fragment>
+  <a href="/" class="button -small"><span aria-hidden="true">← </span>All ideas</a>
+  <div class="standup-details">
+    <h1 class="standup-details--title">{standup.title}</h1>
+    <p class="standup-details--summary">{standup.summary}</p>
+    <p>{standup.description}</p>
+    <ul>
+      {standup.benefits.map((benefit) => (
+        <li class="standup-details--benefit">{benefit}</li>
+      ))}
+    </ul>
+    {standup.contributor?.socialLink && standup.contributor?.socialHandle && (
+      <p class="standup-details--contributor">
+        Contributed by <a href={standup.contributor.socialLink} rel="noopener noreferrer">
+          {standup.contributor.socialHandle}
+        </a>.
+      </p>
+    )}
+  </div>
+  <RelatedStandups tags={standup.tags} title={standup.title} />
+</Layout>

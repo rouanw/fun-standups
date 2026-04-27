@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"
 import _ from 'lodash'
-
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import "../components/fun-standups.sass"
-import Standup from "../components/standup"
-import standups from "../standup-data.json"
-import Unicorns from "../components/unicorns"
+import Standup from "./Standup"
+import standups from "../data/standup-data.json"
+import Unicorns from "./Unicorns"
 
 const filterStandupsByTag = (standups, tag) => standups.filter((standup) => standup.tags && standup.tags.includes(tag))
 
@@ -21,24 +17,19 @@ const IndexPage = () => {
     const { install, status } = new Proxy(new URLSearchParams(window.location.search), {
       get: (searchParams, prop) => searchParams.get(prop),
     })
-    setInstallStatus({
-      install,
-      status,
-    })
+    setInstallStatus({ install, status })
   }, []);
   const transitionTiming = 400
 
   return (
-    <Layout>
-      <Seo title="Home" socialTitle />
-    
+    <>
       <section className="hero">
         <h1 className="display">Remote-friendly standup ideas for your team</h1>
 
         <div className="hero--illustration">
           <Unicorns />
         </div>
-        
+
         <div className="hero--preamble">
           <h2>Tired of having the same old Zoom call every day?</h2>
           <p>Use these fun and creative standup formats to mix things up and learn more about your team and work.</p>
@@ -49,14 +40,13 @@ const IndexPage = () => {
             id="get-random"
             className="button -primary"
             onClick={() => {
-              let randomUrl = [standups[Math.floor(Math.random() * standups.length)].slug]
-              window.location.assign(randomUrl)
+              let randomUrl = standups[Math.floor(Math.random() * standups.length)].slug
+              window.location.assign(`/${randomUrl}/`)
             }}
           >Random standup idea!</button>
           {installStatus?.install === 'slack' && installStatus?.status === 'success' ? <div className="button-banner" aria-live="polite">☑️ Added to Slack</div> : <a href="https://slack.com/oauth/v2/authorize?client_id=1456654958694.4200110150032&scope=chat:write,commands&user_scope=" className="button -secondary"><img src="/slack-logo.svg" className="icon" alt="" role="presentation" /> Add to Slack</a>}
         </div>
       </section>
-
 
       <section className="standup-section">
         <nav className="filter-navigation">
@@ -109,10 +99,10 @@ const IndexPage = () => {
           }}
           onTransitionEnd={() => setHidingStandups(false)}
         >
-          {visiblestandups.map((standup) => <Standup key={standup.title} standup={standup}></Standup>)}
+          {visiblestandups.map((standup) => <Standup key={standup.title} standup={standup} />)}
         </ul>
       </section>
-    </Layout>
+    </>
   )
 }
 

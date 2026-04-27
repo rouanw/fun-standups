@@ -1,0 +1,22 @@
+---
+import Layout from '../components/Layout.astro';
+import IndexPage from '../components/IndexPage.jsx';
+---
+<Layout>
+  <Fragment slot="head">
+    <title>Fun Standups!</title>
+    <meta name="description" content="Remote-friendly standup ideas for your team" />
+    <meta property="og:title" content="Fun Standups!" />
+    <meta property="og:url" content="https://funstandups.com/" />
+    <meta property="og:description" content="Remote-friendly standup ideas for your team" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://funstandups.com/social_3.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@funstandups" />
+    <meta name="twitter:image" content="https://funstandups.com/social_twitter_1.png" />
+    <meta name="twitter:image:alt" content="Fun Standups - remote-friendly standup ideas" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/funicon.png" />
+  </Fragment>
+  <IndexPage client:load />
+</Layout>

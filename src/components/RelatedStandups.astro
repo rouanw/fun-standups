@@ -1,0 +1,29 @@
+---
+import _ from 'lodash';
+import allStandups from '../data/standup-data.json';
+
+const { tags, title } = Astro.props;
+const relatedStandups = allStandups
+  .filter((s) => s.title !== title && _.intersection(s.tags, tags).length)
+  .slice(0, 3);
+---
+{relatedStandups.length > 0 && (
+  <aside class="related-standups">
+    <h2 class="related-standups--header">🌟 Try these next</h2>
+    <ul class="cards">
+      {relatedStandups.map((standup) => (
+        <li class="card">
+          <h2 class="card--title">
+            <a class="card--link" href={`/${standup.slug}/`}>{standup.title}</a>
+          </h2>
+          <p class="card--summary">{standup.summary}</p>
+          <ul class="tags">
+            {(standup.tags ?? []).map((tag) => (
+              <li class="tag">{tag}</li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ul>
+  </aside>
+)}

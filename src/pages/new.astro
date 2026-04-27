@@ -1,0 +1,13 @@
+---
+const URL = 'https://forms.gle/QtQXGZ3E3UCaMnoG9';
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${URL}`} />
+  </head>
+  <body>
+    <p>Redirecting to a page where you can <a href={URL}>create a new standup format</a>.</p>
+    <script define:vars={{ URL }}>window.location.replace(URL);</script>
+  </body>
+</html>
