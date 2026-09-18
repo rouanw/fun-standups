@@ -520,5 +520,24 @@
       "Team bonding",
       "Communication"
     ]
+  },
+  {
+    "slug": "talk-like-a-caveman",
+    "title": "Talk like a caveman",
+    "summary": "During the session each team member is only allowed to speak in one word syllables",
+    "contributor": {
+      "socialHandle": "Meghan92",
+      "socialLink": "https://github.com/Meghan92"
+    },
+    "description": "Each team member is only allowed to speak in one word syllables. When they say more than one word they are given a fine. The team member with the highest number of fines at the end of the session has to do a show and tell at the next stand up e.g. a household item, favourite mug, or a funny pet moment.",
+    "benefits": [
+      "Forces people to slow down before talking",
+      "Encourages team bonding",
+      "Encourages active listening"
+    ],
+    "tags": [
+      "Communication",
+      "Team bonding"
+    ]
   }
 ]
